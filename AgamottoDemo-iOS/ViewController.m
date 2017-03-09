@@ -15,11 +15,33 @@
 
 #import <Agamotto/Agamotto.h>
 
+@interface SubModel : NSObject
+@property (copy,nonatomic) NSString *subtext;
+@end
+
+@implementation SubModel
+@end
+
 @interface Model : NSObject
 @property (copy,nonatomic) NSString *text;
+@property (strong,nonatomic) SubModel *submodel;
 @end
 
 @implementation Model
+- (instancetype)init {
+    if (!(self = [super init]))
+        return nil;
+    
+    _submodel = [[SubModel alloc] init];
+    
+    return self;
+}
+
+- (void)setText:(NSString *)text {
+    _text = [text copy];
+    
+    [self.submodel setSubtext:_text.uppercaseString];
+}
 @end
 
 @interface ViewController ()
@@ -40,8 +62,8 @@
     [self.textField addTarget:self action:@selector(_textFieldAction:) forControlEvents:UIControlEventEditingChanged];
     [self.button addTarget:self action:@selector(_buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.observer = [self KAG_addObserverForKeyPath:@"model.text" block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
-        NSLog(@"text: %@",value);
+    self.observer = [self KAG_addObserverForKeyPaths:@[@"model.text",@"model.submodel.subtext"] options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
+        NSLog(@"keyPath: %@ value: %@",keyPath,value);
     }];
 }
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,8 +79,9 @@
 }
 - (IBAction)_buttonAction:(id)sender {
     [self.observer stopObserving];
-    self.observer = [self KAG_addObserverForKeyPath:@"model.text" options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
-        NSLog(@"text: %@",value);
+    
+    self.observer = [self KAG_addObserverForKeyPaths:@[@"model.text",@"model.submodel.subtext"] options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
+        NSLog(@"keyPath: %@ value: %@",keyPath,value);
     }];
 }
 
