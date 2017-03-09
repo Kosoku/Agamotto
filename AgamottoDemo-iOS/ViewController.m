@@ -1,6 +1,6 @@
 //
-//  NSObject+KAGExtensions.m
-//  Agamotto
+//  ViewController.m
+//  AgamottoDemo-iOS
 //
 //  Created by William Towe on 3/9/17.
 //  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
@@ -13,38 +13,51 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import "NSObject+KAGExtensions.h"
-#import "NSObject+RACKVOWrapper.h"
-#import "RACDisposable.h"
+#import "ViewController.h"
 
-@interface RACDisposable (KAGExtensionsPrivate) <KAGObserver>
+#import <Agamotto/Agamotto.h>
 
+@interface Model : NSObject
+@property (copy,nonatomic) NSString *text;
 @end
 
-@implementation RACDisposable (KAGExtensionsPrivate)
-
-- (void)stopObserving {
-    [self dispose];
-}
-
+@implementation Model
 @end
 
-@implementation NSObject (KAGExtensions)
+@interface ViewController ()
+@property (weak,nonatomic) IBOutlet UITextField *textField;
+@property (weak,nonatomic) IBOutlet UIButton *button;
 
-+ (id<KAGObserver>)KAG_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
-    return [self KAG_addObserver:observer forKeyPath:keyPath options:0 block:block];
-}
-+ (id<KAGObserver>)KAG_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    return [observer rac_observeKeyPath:keyPath options:options observer:observer block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
-        block(value,change);
+@property (strong,nonatomic) Model *model;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setModel:[[Model alloc] init]];
+    
+    [self.textField addTarget:self action:@selector(_textFieldAction:) forControlEvents:UIControlEventEditingChanged];
+    [self.button addTarget:self action:@selector(_buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self KAG_addObserverForKeyPath:@"model.text" block:^(id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
+        NSLog(@"text: %@",value);
     }];
 }
-
-- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
-    return [self KAG_addObserverForKeyPath:keyPath options:0 block:block];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (!self.textField.isFirstResponder) {
+        [self.textField becomeFirstResponder];
+    }
 }
-- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    return [self.class KAG_addObserver:self forKeyPath:keyPath options:options block:block];
+
+- (IBAction)_textFieldAction:(id)sender {
+    [self.model setText:self.textField.text];
+}
+- (IBAction)_buttonAction:(id)sender {
+    [self setModel:[[Model alloc] init]];
 }
 
 @end

@@ -32,7 +32,24 @@
 		07DB3CB11E7138940089F7F5 /* RACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB01E7138940089F7F5 /* RACmetamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		07DB3CB41E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB21E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		07DB3CB51E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CB31E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m */; };
+		07DB3CBE1E713B420089F7F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CBD1E713B420089F7F5 /* main.m */; };
+		07DB3CC11E713B420089F7F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CC01E713B420089F7F5 /* AppDelegate.m */; };
+		07DB3CC41E713B420089F7F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CC31E713B420089F7F5 /* ViewController.m */; };
+		07DB3CC71E713B420089F7F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CC51E713B420089F7F5 /* Main.storyboard */; };
+		07DB3CC91E713B420089F7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CC81E713B420089F7F5 /* Assets.xcassets */; };
+		07DB3CCC1E713B420089F7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CCA1E713B420089F7F5 /* LaunchScreen.storyboard */; };
+		07DB3CD31E713B550089F7F5 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072628231E70E49800511F80 /* Agamotto.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07DB3CD11E713B510089F7F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072628181E70E40C00511F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072628221E70E49800511F80;
+			remoteInfo = "Agamotto-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		072628231E70E49800511F80 /* Agamotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Agamotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +80,16 @@
 		07DB3CB01E7138940089F7F5 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
 		07DB3CB21E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RACKeyPathUtilities.h"; sourceTree = "<group>"; };
 		07DB3CB31E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RACKeyPathUtilities.m"; sourceTree = "<group>"; };
+		07DB3CBA1E713B420089F7F5 /* AgamottoDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgamottoDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DB3CBD1E713B420089F7F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07DB3CBF1E713B420089F7F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07DB3CC01E713B420089F7F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07DB3CC21E713B420089F7F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07DB3CC31E713B420089F7F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07DB3CC61E713B420089F7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07DB3CC81E713B420089F7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07DB3CCB1E713B420089F7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07DB3CCD1E713B420089F7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +100,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07DB3CB71E713B420089F7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DB3CD31E713B550089F7F5 /* Agamotto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				072628251E70E49800511F80 /* Agamotto */,
+				07DB3CBB1E713B420089F7F5 /* AgamottoDemo-iOS */,
 				072628241E70E49800511F80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				072628231E70E49800511F80 /* Agamotto.framework */,
+				07DB3CBA1E713B420089F7F5 /* AgamottoDemo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +179,30 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		07DB3CBB1E713B420089F7F5 /* AgamottoDemo-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				07DB3CBF1E713B420089F7F5 /* AppDelegate.h */,
+				07DB3CC01E713B420089F7F5 /* AppDelegate.m */,
+				07DB3CC21E713B420089F7F5 /* ViewController.h */,
+				07DB3CC31E713B420089F7F5 /* ViewController.m */,
+				07DB3CC51E713B420089F7F5 /* Main.storyboard */,
+				07DB3CC81E713B420089F7F5 /* Assets.xcassets */,
+				07DB3CCA1E713B420089F7F5 /* LaunchScreen.storyboard */,
+				07DB3CCD1E713B420089F7F5 /* Info.plist */,
+				07DB3CBC1E713B420089F7F5 /* Supporting Files */,
+			);
+			path = "AgamottoDemo-iOS";
+			sourceTree = "<group>";
+		};
+		07DB3CBC1E713B420089F7F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07DB3CBD1E713B420089F7F5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -187,6 +248,24 @@
 			productReference = 072628231E70E49800511F80 /* Agamotto.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		07DB3CB91E713B420089F7F5 /* AgamottoDemo-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07DB3CCE1E713B420089F7F5 /* Build configuration list for PBXNativeTarget "AgamottoDemo-iOS" */;
+			buildPhases = (
+				07DB3CB61E713B420089F7F5 /* Sources */,
+				07DB3CB71E713B420089F7F5 /* Frameworks */,
+				07DB3CB81E713B420089F7F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07DB3CD21E713B510089F7F5 /* PBXTargetDependency */,
+			);
+			name = "AgamottoDemo-iOS";
+			productName = "AgamottoDemo-iOS";
+			productReference = 07DB3CBA1E713B420089F7F5 /* AgamottoDemo-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +280,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					07DB3CB91E713B420089F7F5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0726281B1E70E40C00511F80 /* Build configuration list for PBXProject "Agamotto" */;
@@ -209,6 +292,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 072628171E70E40C00511F80;
 			productRefGroup = 072628241E70E49800511F80 /* Products */;
@@ -216,6 +300,7 @@
 			projectRoot = "";
 			targets = (
 				072628221E70E49800511F80 /* Agamotto-iOS */,
+				07DB3CB91E713B420089F7F5 /* AgamottoDemo-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +310,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07DB3CB81E713B420089F7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DB3CCC1E713B420089F7F5 /* LaunchScreen.storyboard in Resources */,
+				07DB3CC91E713B420089F7F5 /* Assets.xcassets in Resources */,
+				07DB3CC71E713B420089F7F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +344,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07DB3CB61E713B420089F7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DB3CC41E713B420089F7F5 /* ViewController.m in Sources */,
+				07DB3CC11E713B420089F7F5 /* AppDelegate.m in Sources */,
+				07DB3CBE1E713B420089F7F5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07DB3CD21E713B510089F7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072628221E70E49800511F80 /* Agamotto-iOS */;
+			targetProxy = 07DB3CD11E713B510089F7F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07DB3CC51E713B420089F7F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07DB3CC61E713B420089F7F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07DB3CCA1E713B420089F7F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07DB3CCB1E713B420089F7F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0726281C1E70E40C00511F80 /* Debug */ = {
@@ -314,7 +446,7 @@
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Agamotto/Agamotto-Info.h";
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -372,7 +504,7 @@
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Agamotto/Agamotto-Info.h";
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.agamotto;
@@ -383,6 +515,106 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07DB3CCF1E713B420089F7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AgamottoDemo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07DB3CD01E713B420089F7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AgamottoDemo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -406,6 +638,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		07DB3CCE1E713B420089F7F5 /* Build configuration list for PBXNativeTarget "AgamottoDemo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07DB3CCF1E713B420089F7F5 /* Debug */,
+				07DB3CD01E713B420089F7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AgamottoDemo-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>072628221E70E49800511F80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07DB3CB91E713B420089F7F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
