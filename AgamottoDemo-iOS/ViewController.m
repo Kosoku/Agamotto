@@ -78,11 +78,7 @@
     [self.model setText:self.textField.text];
 }
 - (IBAction)_buttonAction:(id)sender {
-    [self.observer stopObserving];
-    
-    self.observer = [self KAG_addObserverForKeyPaths:@[@"model.text",@"model.submodel.subtext"] options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
-        NSLog(@"keyPath: %@ value: %@",keyPath,value);
-    }];
+    [self.model setSubmodel:[[SubModel alloc] init]];
 }
 
 @end
