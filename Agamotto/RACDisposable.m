@@ -71,7 +71,7 @@
 
 	while (YES) {
 		void *blockPtr = _disposeBlock;
-        if (atomic_compare_exchange_strong_explicit((volatile _Atomic(void*)*)&_disposeBlock, &blockPtr, NULL, memory_order_seq_cst, memory_order_relaxed)) {
+        if (atomic_compare_exchange_strong((volatile _Atomic(void*)*)&_disposeBlock, &blockPtr, NULL)) {
 			if (blockPtr != (__bridge void *)self) {
 				disposeBlock = CFBridgingRelease(blockPtr);
 			}
