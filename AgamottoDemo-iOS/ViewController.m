@@ -27,6 +27,7 @@
 @property (weak,nonatomic) IBOutlet UIButton *button;
 
 @property (strong,nonatomic) Model *model;
+@property (strong,nonatomic) id<KAGObserver> observer;
 @end
 
 @implementation ViewController
@@ -39,7 +40,7 @@
     [self.textField addTarget:self action:@selector(_textFieldAction:) forControlEvents:UIControlEventEditingChanged];
     [self.button addTarget:self action:@selector(_buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self KAG_addObserverForKeyPath:@"model.text" block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
+    self.observer = [self KAG_addObserverForKeyPath:@"model.text" block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
         NSLog(@"text: %@",value);
     }];
 }
@@ -55,7 +56,10 @@
     [self.model setText:self.textField.text];
 }
 - (IBAction)_buttonAction:(id)sender {
-    [self setModel:[[Model alloc] init]];
+    [self.observer stopObserving];
+    self.observer = [self KAG_addObserverForKeyPath:@"model.text" options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
+        NSLog(@"text: %@",value);
+    }];
 }
 
 @end

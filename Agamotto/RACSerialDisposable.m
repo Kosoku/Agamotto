@@ -7,7 +7,8 @@
 //
 
 #import "RACSerialDisposable.h"
-#import <libkern/OSAtomic.h>
+
+#import <os/lock.h>
 
 @interface RACSerialDisposable () {
 	// The receiver's `disposable`. This variable must only be referenced while
@@ -22,7 +23,7 @@
 	//
 	// It must be used when _disposable is mutated or retained and when _disposed
 	// is mutated.
-	OSSpinLock _spinLock;
+	os_unfair_lock _spinLock;
 }
 
 @end
@@ -38,9 +39,9 @@
 - (RACDisposable *)disposable {
 	RACDisposable *result;
 
-	OSSpinLockLock(&_spinLock);
+	os_unfair_lock_lock(&_spinLock);
 	result = _disposable;
-	OSSpinLockUnlock(&_spinLock);
+	os_unfair_lock_unlock(&_spinLock);
 
 	return result;
 }
@@ -72,13 +73,13 @@
 	RACDisposable *existingDisposable;
 	BOOL alreadyDisposed;
 
-	OSSpinLockLock(&_spinLock);
+	os_unfair_lock_lock(&_spinLock);
 	alreadyDisposed = _disposed;
 	if (!alreadyDisposed) {
 		existingDisposable = _disposable;
 		_disposable = newDisposable;
 	}
-	OSSpinLockUnlock(&_spinLock);
+	os_unfair_lock_unlock(&_spinLock);
 
 	if (alreadyDisposed) {
 		[newDisposable dispose];
@@ -93,13 +94,13 @@
 - (void)dispose {
 	RACDisposable *existingDisposable;
 
-	OSSpinLockLock(&_spinLock);
+	os_unfair_lock_lock(&_spinLock);
 	if (!_disposed) {
 		existingDisposable = _disposable;
 		_disposed = YES;
 		_disposable = nil;
 	}
-	OSSpinLockUnlock(&_spinLock);
+	os_unfair_lock_unlock(&_spinLock);
 	
 	[existingDisposable dispose];
 }
