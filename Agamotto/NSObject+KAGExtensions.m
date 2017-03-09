@@ -15,11 +15,23 @@
 #import "NSObject+RACKVOWrapper.h"
 #import "RACCompoundDisposable.h"
 
-@interface RACDisposable (KAGExtensionsPrivate) <KAGObserver>
+#import <objc/runtime.h>
 
+@interface RACDisposable (KAGExtensionsPrivate) <KAGObserver>
+@property (readwrite,copy,nonatomic) NSSet<NSString *> *observingKeyPaths;
 @end
 
 @implementation RACDisposable (KAGExtensionsPrivate)
+
+static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
+
+@dynamic observingKeyPaths;
+- (NSSet<NSString *> *)observingKeyPaths {
+    return objc_getAssociatedObject(self, kKAG_ObservingKeyPathsKey);
+}
+- (void)setObservingKeyPaths:(NSSet<NSString *> *)observingKeyPaths {
+    objc_setAssociatedObject(self, kKAG_ObservingKeyPathsKey, observingKeyPaths, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
 
 - (void)stopObserving {
     [self dispose];
@@ -29,24 +41,34 @@
 
 @implementation NSObject (KAGExtensions)
 
-+ (id<KAGObserver>)KAG_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
-    return [self KAG_addObserver:observer forKeyPath:keyPath options:0 block:block];
++ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
+    return [self KAG_observeTarget:target forKeyPath:keyPath options:0 block:block];
 }
-+ (id<KAGObserver>)KAG_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    return [self KAG_addObserver:observer forKeyPaths:@[keyPath] options:options block:block];
++ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
+    return [self KAG_observeTarget:target forKeyPaths:@[keyPath] options:options block:block];
 }
-+ (id<KAGObserver>)KAG_addObserver:(NSObject *)observer forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    NSMutableArray *disposables = [[NSMutableArray alloc] init];
++ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
+    NSMutableSet *uniqueKeyPaths = [[NSMutableSet alloc] init];
     
     for (NSString *keyPath in keyPaths) {
-        RACDisposable *disposable = [observer rac_observeKeyPath:keyPath options:options observer:observer block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
+        [uniqueKeyPaths addObject:keyPath];
+    }
+    
+    NSMutableArray *disposables = [[NSMutableArray alloc] init];
+    
+    for (NSString *keyPath in uniqueKeyPaths) {
+        RACDisposable *disposable = [target rac_observeKeyPath:keyPath options:options observer:nil block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
             block(keyPath, value, change);
         }];
         
         [disposables addObject:disposable];
     }
     
-    return [RACCompoundDisposable compoundDisposableWithDisposables:disposables];
+    RACCompoundDisposable *retval = [RACCompoundDisposable compoundDisposableWithDisposables:disposables];
+    
+    [retval setObservingKeyPaths:uniqueKeyPaths];
+    
+    return retval;
 }
 
 - (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
@@ -56,7 +78,7 @@
     return [self KAG_addObserverForKeyPaths:@[keyPath] options:options block:block];
 }
 - (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    return [self.class KAG_addObserver:self forKeyPaths:keyPaths options:options block:block];
+    return [self.class KAG_observeTarget:self forKeyPaths:keyPaths options:options block:block];
 }
 
 @end
