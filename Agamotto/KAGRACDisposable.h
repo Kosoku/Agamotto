@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class RACScopedDisposable;
+@class KAGRACScopedDisposable;
 
 /// A disposable encapsulates the work necessary to tear down and cleanup a
 /// subscription.
@@ -30,6 +30,6 @@
 
 /// Returns a new disposable which will dispose of this disposable when it gets
 /// dealloc'd.
-- (RACScopedDisposable *)asScopedDisposable;
+- (KAGRACScopedDisposable *)asScopedDisposable;
 
 @end

@@ -1,22 +1,22 @@
 //
-//  NSObject+RACKVOWrapper.m
+//  NSObject+KAGRACKVOWrapper.m
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 10/11/11.
 //  Copyright (c) 2011 GitHub. All rights reserved.
 //
 
-#import "NSObject+RACKVOWrapper.h"
-#import "RACEXTRuntimeExtensions.h"
-#import "RACEXTScope.h"
+#import "NSObject+KAGRACKVOWrapper.h"
+#import "KAGRACEXTRuntimeExtensions.h"
+#import "KAGRACEXTScope.h"
 #import "NSObject+KAGRACDeallocating.h"
-#import "NSString+RACKeyPathUtilities.h"
-#import "RACCompoundDisposable.h"
+#import "NSString+KAGRACKeyPathUtilities.h"
+#import "KAGRACCompoundDisposable.h"
 #import "KAGRACDisposable.h"
-#import "RACKVOTrampoline.h"
-#import "RACSerialDisposable.h"
+#import "KAGRACKVOTrampoline.h"
+#import "KAGRACSerialDisposable.h"
 
-@implementation NSObject (RACKVOWrapper)
+@implementation NSObject (KAGRACKVOWrapper)
 
 - (KAGRACDisposable *)rac_observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options observer:(__weak NSObject *)weakObserver block:(void (^)(id, NSDictionary *, BOOL, BOOL))block {
 	NSCParameterAssert(block != nil);
@@ -31,13 +31,13 @@
 	NSString *keyPathHead = keyPathComponents[0];
 	NSString *keyPathTail = keyPath.rac_keyPathByDeletingFirstKeyPathComponent;
 
-	RACCompoundDisposable *disposable = [RACCompoundDisposable compoundDisposable];
+	KAGRACCompoundDisposable *disposable = [KAGRACCompoundDisposable compoundDisposable];
 
 	// The disposable that groups all disposal necessary to clean up the callbacks
 	// added to the value of the first key path component.
-	RACSerialDisposable *firstComponentSerialDisposable = [RACSerialDisposable serialDisposableWithDisposable:[RACCompoundDisposable compoundDisposable]];
-	RACCompoundDisposable * (^firstComponentDisposable)(void) = ^{
-		return (RACCompoundDisposable *)firstComponentSerialDisposable.disposable;
+	KAGRACSerialDisposable *firstComponentSerialDisposable = [KAGRACSerialDisposable serialDisposableWithDisposable:[KAGRACCompoundDisposable compoundDisposable]];
+	KAGRACCompoundDisposable * (^firstComponentDisposable)(void) = ^{
+		return (KAGRACCompoundDisposable *)firstComponentSerialDisposable.disposable;
 	};
 
 	[disposable addDisposable:firstComponentSerialDisposable];
@@ -86,7 +86,7 @@
 			NSKeyValueChangeNewKey: NSNull.null,
 		};
 
-		RACCompoundDisposable *valueDisposable = value.rac_deallocDisposable;
+		KAGRACCompoundDisposable *valueDisposable = value.rac_deallocDisposable;
 		KAGRACDisposable *deallocDisposable = [KAGRACDisposable disposableWithBlock:^{
 			block(nil, change, YES, keyPathHasOneComponent);
 		}];
@@ -112,7 +112,7 @@
 	// handles changes to the value, callbacks to the initial value must be added
 	// separately.
 	NSKeyValueObservingOptions trampolineOptions = (options | NSKeyValueObservingOptionPrior) & ~NSKeyValueObservingOptionInitial;
-	RACKVOTrampoline *trampoline = [[RACKVOTrampoline alloc] initWithTarget:self observer:strongObserver keyPath:keyPathHead options:trampolineOptions block:^(id trampolineTarget, id trampolineObserver, NSDictionary *change) {
+	KAGRACKVOTrampoline *trampoline = [[KAGRACKVOTrampoline alloc] initWithTarget:self observer:strongObserver keyPath:keyPathHead options:trampolineOptions block:^(id trampolineTarget, id trampolineObserver, NSDictionary *change) {
 		// If this is a prior notification, clean up all the callbacks added to the
 		// previous value and call the callback block. Everything else is deferred
 		// until after we get the notification after the change.
@@ -140,7 +140,7 @@
 
 		// Create a new firstComponentDisposable while getting rid of the old one at
 		// the same time, in case this is being called concurrently.
-		KAGRACDisposable *oldFirstComponentDisposable = [firstComponentSerialDisposable swapInDisposable:[RACCompoundDisposable compoundDisposable]];
+		KAGRACDisposable *oldFirstComponentDisposable = [firstComponentSerialDisposable swapInDisposable:[KAGRACCompoundDisposable compoundDisposable]];
 		[oldFirstComponentDisposable dispose];
 
 		addDeallocObserverToPropertyValue(value);
@@ -184,8 +184,8 @@
 	}
 
 
-	RACCompoundDisposable *observerDisposable = strongObserver.rac_deallocDisposable;
-	RACCompoundDisposable *selfDisposable = self.rac_deallocDisposable;
+	KAGRACCompoundDisposable *observerDisposable = strongObserver.rac_deallocDisposable;
+	KAGRACCompoundDisposable *selfDisposable = self.rac_deallocDisposable;
 	// Dispose of this observation if the receiver or the observer deallocate.
 	[observerDisposable addDisposable:disposable];
 	[selfDisposable addDisposable:disposable];
@@ -204,8 +204,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-implementations"
 
-- (RACKVOTrampoline *)rac_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(RACKVOBlock)block {
-	return [[RACKVOTrampoline alloc] initWithTarget:self observer:observer keyPath:keyPath options:options block:block];
+- (KAGRACKVOTrampoline *)rac_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(RACKVOBlock)block {
+	return [[KAGRACKVOTrampoline alloc] initWithTarget:self observer:observer keyPath:keyPath options:options block:block];
 }
 
 #pragma clang diagnostic pop

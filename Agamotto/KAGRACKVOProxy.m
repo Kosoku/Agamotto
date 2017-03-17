@@ -1,24 +1,24 @@
 //
-//  RACKVOProxy.m
+//  KAGRACKVOProxy.m
 //  ReactiveCocoa
 //
 //  Created by Richard Speyer on 4/10/14.
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
-#import "RACKVOProxy.h"
+#import "KAGRACKVOProxy.h"
 
-@interface RACKVOProxy()
+@interface KAGRACKVOProxy()
 
 @property (strong, nonatomic, readonly) NSMapTable *trampolines;
 @property (strong, nonatomic, readonly) dispatch_queue_t queue;
 
 @end
 
-@implementation RACKVOProxy
+@implementation KAGRACKVOProxy
 
 + (instancetype)sharedProxy {
-	static RACKVOProxy *proxy;
+	static KAGRACKVOProxy *proxy;
 	static dispatch_once_t onceToken;
 
 	dispatch_once(&onceToken, ^{
@@ -32,7 +32,7 @@
 	self = [super init];
 	if (self == nil) return nil;
 
-	_queue = dispatch_queue_create("org.reactivecocoa.ReactiveCocoa.RACKVOProxy", DISPATCH_QUEUE_SERIAL);
+	_queue = dispatch_queue_create("org.reactivecocoa.ReactiveCocoa.KAGRACKVOProxy", DISPATCH_QUEUE_SERIAL);
 	_trampolines = [NSMapTable strongToWeakObjectsMapTable];
 
 	return self;

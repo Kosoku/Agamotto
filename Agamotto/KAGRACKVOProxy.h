@@ -1,5 +1,5 @@
 //
-//  RACKVOProxy.h
+//  KAGRACKVOProxy.h
 //  ReactiveCocoa
 //
 //  Created by Richard Speyer on 4/10/14.
@@ -10,7 +10,7 @@
 
 /// A singleton that can act as a proxy between a KVO observation and a RAC
 /// subscriber, in order to protect against KVO lifetime issues.
-@interface RACKVOProxy : NSObject
+@interface KAGRACKVOProxy : NSObject
 
 /// Returns the singleton KVO proxy object.
 + (instancetype)sharedProxy;

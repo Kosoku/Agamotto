@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class RACCompoundDisposable;
+@class KAGRACCompoundDisposable;
 @class KAGRACDisposable;
 
 @interface NSObject (KAGRACDeallocating)
 
 /// The compound disposable which will be disposed of when the receiver is
 /// deallocated.
-@property (atomic, readonly, strong) RACCompoundDisposable *rac_deallocDisposable;
+@property (atomic, readonly, strong) KAGRACCompoundDisposable *rac_deallocDisposable;
 
 @end

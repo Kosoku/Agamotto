@@ -1,5 +1,5 @@
 //
-//  RACKVOTrampoline.h
+//  KAGRACKVOTrampoline.h
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 1/15/13.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+RACKVOWrapper.h"
+#import "NSObject+KAGRACKVOWrapper.h"
 #import "KAGRACDisposable.h"
 
 // A private trampoline object that represents a KVO observation.
 //
 // Disposing of the trampoline will stop observation.
-@interface RACKVOTrampoline : KAGRACDisposable
+@interface KAGRACKVOTrampoline : KAGRACDisposable
 
 // Initializes the receiver with the given parameters.
 //

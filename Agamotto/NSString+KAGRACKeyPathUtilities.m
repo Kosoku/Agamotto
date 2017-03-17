@@ -1,14 +1,14 @@
 //
-//  NSString+RACKeyPathUtilities.m
+//  NSString+KAGRACKeyPathUtilities.m
 //  ReactiveCocoa
 //
 //  Created by Uri Baghin on 05/05/2013.
 //  Copyright (c) 2013 GitHub, Inc. All rights reserved.
 //
 
-#import "NSString+RACKeyPathUtilities.h"
+#import "NSString+KAGRACKeyPathUtilities.h"
 
-@implementation NSString (RACKeyPathUtilities)
+@implementation NSString (KAGRACKeyPathUtilities)
 
 - (NSArray *)rac_keyPathComponents {
 	if (self.length == 0) {

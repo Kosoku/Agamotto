@@ -1,5 +1,5 @@
 //
-//  NSObject+RACKVOWrapper.h
+//  NSObject+KAGRACKVOWrapper.h
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 10/11/11.
@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @class KAGRACDisposable;
-@class RACKVOTrampoline;
+@class KAGRACKVOTrampoline;
 
 // A private category providing a block based interface to KVO.
-@interface NSObject (RACKVOWrapper)
+@interface NSObject (KAGRACKVOWrapper)
 
 // Adds the given block as the callbacks for when the key path changes.
 //
@@ -41,6 +41,6 @@ typedef void (^RACKVOBlock)(id target, id observer, NSDictionary *change);
 
 @interface NSObject (RACKVOWrapperDeprecated)
 
-- (RACKVOTrampoline *)rac_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(RACKVOBlock)block __attribute((deprecated("Use rac_observeKeyPath:options:observer:block: instead.")));
+- (KAGRACKVOTrampoline *)rac_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(RACKVOBlock)block __attribute((deprecated("Use rac_observeKeyPath:options:observer:block: instead.")));
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "KAGRACDisposable.h"
-#import "RACScopedDisposable.h"
+#import "KAGRACScopedDisposable.h"
 #import <stdatomic.h>
 
 @interface KAGRACDisposable () {
@@ -85,8 +85,8 @@
 
 #pragma mark Scoped Disposables
 
-- (RACScopedDisposable *)asScopedDisposable {
-	return [RACScopedDisposable scopedDisposableWithDisposable:self];
+- (KAGRACScopedDisposable *)asScopedDisposable {
+	return [KAGRACScopedDisposable scopedDisposableWithDisposable:self];
 }
 
 @end

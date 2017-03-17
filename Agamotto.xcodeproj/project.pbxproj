@@ -14,24 +14,24 @@
 		07DB3C8D1E7135AC0089F7F5 /* KAGRACDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C8B1E7135AC0089F7F5 /* KAGRACDisposable.m */; };
 		07DB3C9A1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8E1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		07DB3C9B1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C8F1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m */; };
-		07DB3C9C1E7136500089F7F5 /* NSObject+RACKVOWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C901E7136500089F7F5 /* NSObject+RACKVOWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3C9D1E7136500089F7F5 /* NSObject+RACKVOWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C911E7136500089F7F5 /* NSObject+RACKVOWrapper.m */; };
-		07DB3C9E1E7136500089F7F5 /* RACCompoundDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C921E7136500089F7F5 /* RACCompoundDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3C9F1E7136500089F7F5 /* RACCompoundDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C931E7136500089F7F5 /* RACCompoundDisposable.m */; };
-		07DB3CA01E7136500089F7F5 /* RACKVOTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C941E7136500089F7F5 /* RACKVOTrampoline.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CA11E7136500089F7F5 /* RACKVOTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C951E7136500089F7F5 /* RACKVOTrampoline.m */; };
-		07DB3CA21E7136500089F7F5 /* RACScopedDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C961E7136500089F7F5 /* RACScopedDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CA31E7136500089F7F5 /* RACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C971E7136500089F7F5 /* RACScopedDisposable.m */; };
-		07DB3CA41E7136500089F7F5 /* RACSerialDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C981E7136500089F7F5 /* RACSerialDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CA51E7136500089F7F5 /* RACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C991E7136500089F7F5 /* RACSerialDisposable.m */; };
-		07DB3CA81E7138270089F7F5 /* RACKVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CA61E7138270089F7F5 /* RACKVOProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CA91E7138270089F7F5 /* RACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CA71E7138270089F7F5 /* RACKVOProxy.m */; };
-		07DB3CAC1E7138540089F7F5 /* RACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAA1E7138540089F7F5 /* RACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CAD1E7138540089F7F5 /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CAB1E7138540089F7F5 /* RACEXTRuntimeExtensions.m */; };
-		07DB3CAF1E7138850089F7F5 /* RACEXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAE1E7138850089F7F5 /* RACEXTScope.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CB11E7138940089F7F5 /* RACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB01E7138940089F7F5 /* RACmetamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CB41E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB21E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07DB3CB51E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CB31E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m */; };
+		07DB3C9C1E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C901E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3C9D1E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C911E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m */; };
+		07DB3C9E1E7136500089F7F5 /* KAGRACCompoundDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C921E7136500089F7F5 /* KAGRACCompoundDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3C9F1E7136500089F7F5 /* KAGRACCompoundDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C931E7136500089F7F5 /* KAGRACCompoundDisposable.m */; };
+		07DB3CA01E7136500089F7F5 /* KAGRACKVOTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C941E7136500089F7F5 /* KAGRACKVOTrampoline.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CA11E7136500089F7F5 /* KAGRACKVOTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C951E7136500089F7F5 /* KAGRACKVOTrampoline.m */; };
+		07DB3CA21E7136500089F7F5 /* KAGRACScopedDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C961E7136500089F7F5 /* KAGRACScopedDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CA31E7136500089F7F5 /* KAGRACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C971E7136500089F7F5 /* KAGRACScopedDisposable.m */; };
+		07DB3CA41E7136500089F7F5 /* KAGRACSerialDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C981E7136500089F7F5 /* KAGRACSerialDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CA51E7136500089F7F5 /* KAGRACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C991E7136500089F7F5 /* KAGRACSerialDisposable.m */; };
+		07DB3CA81E7138270089F7F5 /* KAGRACKVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CA61E7138270089F7F5 /* KAGRACKVOProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CA91E7138270089F7F5 /* KAGRACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CA71E7138270089F7F5 /* KAGRACKVOProxy.m */; };
+		07DB3CAC1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAA1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CAD1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CAB1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m */; };
+		07DB3CAF1E7138850089F7F5 /* KAGRACEXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAE1E7138850089F7F5 /* KAGRACEXTScope.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CB11E7138940089F7F5 /* KAGRACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB01E7138940089F7F5 /* KAGRACmetamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CB41E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB21E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07DB3CB51E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */; };
 		07DB3CBE1E713B420089F7F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CBD1E713B420089F7F5 /* main.m */; };
 		07DB3CC11E713B420089F7F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CC01E713B420089F7F5 /* AppDelegate.m */; };
 		07DB3CC41E713B420089F7F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CC31E713B420089F7F5 /* ViewController.m */; };
@@ -62,24 +62,24 @@
 		07DB3C8B1E7135AC0089F7F5 /* KAGRACDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACDisposable.m; sourceTree = "<group>"; };
 		07DB3C8E1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KAGRACDeallocating.h"; sourceTree = "<group>"; };
 		07DB3C8F1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KAGRACDeallocating.m"; sourceTree = "<group>"; };
-		07DB3C901E7136500089F7F5 /* NSObject+RACKVOWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RACKVOWrapper.h"; sourceTree = "<group>"; };
-		07DB3C911E7136500089F7F5 /* NSObject+RACKVOWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RACKVOWrapper.m"; sourceTree = "<group>"; };
-		07DB3C921E7136500089F7F5 /* RACCompoundDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACCompoundDisposable.h; sourceTree = "<group>"; };
-		07DB3C931E7136500089F7F5 /* RACCompoundDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACCompoundDisposable.m; sourceTree = "<group>"; };
-		07DB3C941E7136500089F7F5 /* RACKVOTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACKVOTrampoline.h; sourceTree = "<group>"; };
-		07DB3C951E7136500089F7F5 /* RACKVOTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACKVOTrampoline.m; sourceTree = "<group>"; };
-		07DB3C961E7136500089F7F5 /* RACScopedDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACScopedDisposable.h; sourceTree = "<group>"; };
-		07DB3C971E7136500089F7F5 /* RACScopedDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACScopedDisposable.m; sourceTree = "<group>"; };
-		07DB3C981E7136500089F7F5 /* RACSerialDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSerialDisposable.h; sourceTree = "<group>"; };
-		07DB3C991E7136500089F7F5 /* RACSerialDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSerialDisposable.m; sourceTree = "<group>"; };
-		07DB3CA61E7138270089F7F5 /* RACKVOProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACKVOProxy.h; sourceTree = "<group>"; };
-		07DB3CA71E7138270089F7F5 /* RACKVOProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACKVOProxy.m; sourceTree = "<group>"; };
-		07DB3CAA1E7138540089F7F5 /* RACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
-		07DB3CAB1E7138540089F7F5 /* RACEXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACEXTRuntimeExtensions.m; sourceTree = "<group>"; };
-		07DB3CAE1E7138850089F7F5 /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
-		07DB3CB01E7138940089F7F5 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
-		07DB3CB21E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RACKeyPathUtilities.h"; sourceTree = "<group>"; };
-		07DB3CB31E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RACKeyPathUtilities.m"; sourceTree = "<group>"; };
+		07DB3C901E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KAGRACKVOWrapper.h"; sourceTree = "<group>"; };
+		07DB3C911E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KAGRACKVOWrapper.m"; sourceTree = "<group>"; };
+		07DB3C921E7136500089F7F5 /* KAGRACCompoundDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACCompoundDisposable.h; sourceTree = "<group>"; };
+		07DB3C931E7136500089F7F5 /* KAGRACCompoundDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACCompoundDisposable.m; sourceTree = "<group>"; };
+		07DB3C941E7136500089F7F5 /* KAGRACKVOTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACKVOTrampoline.h; sourceTree = "<group>"; };
+		07DB3C951E7136500089F7F5 /* KAGRACKVOTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACKVOTrampoline.m; sourceTree = "<group>"; };
+		07DB3C961E7136500089F7F5 /* KAGRACScopedDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACScopedDisposable.h; sourceTree = "<group>"; };
+		07DB3C971E7136500089F7F5 /* KAGRACScopedDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACScopedDisposable.m; sourceTree = "<group>"; };
+		07DB3C981E7136500089F7F5 /* KAGRACSerialDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACSerialDisposable.h; sourceTree = "<group>"; };
+		07DB3C991E7136500089F7F5 /* KAGRACSerialDisposable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACSerialDisposable.m; sourceTree = "<group>"; };
+		07DB3CA61E7138270089F7F5 /* KAGRACKVOProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACKVOProxy.h; sourceTree = "<group>"; };
+		07DB3CA71E7138270089F7F5 /* KAGRACKVOProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACKVOProxy.m; sourceTree = "<group>"; };
+		07DB3CAA1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		07DB3CAB1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGRACEXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		07DB3CAE1E7138850089F7F5 /* KAGRACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACEXTScope.h; sourceTree = "<group>"; };
+		07DB3CB01E7138940089F7F5 /* KAGRACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACmetamacros.h; sourceTree = "<group>"; };
+		07DB3CB21E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KAGRACKeyPathUtilities.h"; sourceTree = "<group>"; };
+		07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KAGRACKeyPathUtilities.m"; sourceTree = "<group>"; };
 		07DB3CBA1E713B420089F7F5 /* AgamottoDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgamottoDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DB3CBD1E713B420089F7F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07DB3CBF1E713B420089F7F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,24 +157,24 @@
 				07DB3C8B1E7135AC0089F7F5 /* KAGRACDisposable.m */,
 				07DB3C8E1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h */,
 				07DB3C8F1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m */,
-				07DB3C901E7136500089F7F5 /* NSObject+RACKVOWrapper.h */,
-				07DB3C911E7136500089F7F5 /* NSObject+RACKVOWrapper.m */,
-				07DB3C921E7136500089F7F5 /* RACCompoundDisposable.h */,
-				07DB3C931E7136500089F7F5 /* RACCompoundDisposable.m */,
-				07DB3C941E7136500089F7F5 /* RACKVOTrampoline.h */,
-				07DB3C951E7136500089F7F5 /* RACKVOTrampoline.m */,
-				07DB3C961E7136500089F7F5 /* RACScopedDisposable.h */,
-				07DB3C971E7136500089F7F5 /* RACScopedDisposable.m */,
-				07DB3C981E7136500089F7F5 /* RACSerialDisposable.h */,
-				07DB3C991E7136500089F7F5 /* RACSerialDisposable.m */,
-				07DB3CA61E7138270089F7F5 /* RACKVOProxy.h */,
-				07DB3CA71E7138270089F7F5 /* RACKVOProxy.m */,
-				07DB3CAA1E7138540089F7F5 /* RACEXTRuntimeExtensions.h */,
-				07DB3CAB1E7138540089F7F5 /* RACEXTRuntimeExtensions.m */,
-				07DB3CAE1E7138850089F7F5 /* RACEXTScope.h */,
-				07DB3CB01E7138940089F7F5 /* RACmetamacros.h */,
-				07DB3CB21E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h */,
-				07DB3CB31E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m */,
+				07DB3C901E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h */,
+				07DB3C911E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m */,
+				07DB3C921E7136500089F7F5 /* KAGRACCompoundDisposable.h */,
+				07DB3C931E7136500089F7F5 /* KAGRACCompoundDisposable.m */,
+				07DB3C941E7136500089F7F5 /* KAGRACKVOTrampoline.h */,
+				07DB3C951E7136500089F7F5 /* KAGRACKVOTrampoline.m */,
+				07DB3C961E7136500089F7F5 /* KAGRACScopedDisposable.h */,
+				07DB3C971E7136500089F7F5 /* KAGRACScopedDisposable.m */,
+				07DB3C981E7136500089F7F5 /* KAGRACSerialDisposable.h */,
+				07DB3C991E7136500089F7F5 /* KAGRACSerialDisposable.m */,
+				07DB3CA61E7138270089F7F5 /* KAGRACKVOProxy.h */,
+				07DB3CA71E7138270089F7F5 /* KAGRACKVOProxy.m */,
+				07DB3CAA1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h */,
+				07DB3CAB1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m */,
+				07DB3CAE1E7138850089F7F5 /* KAGRACEXTScope.h */,
+				07DB3CB01E7138940089F7F5 /* KAGRACmetamacros.h */,
+				07DB3CB21E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h */,
+				07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -210,20 +210,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07DB3CAF1E7138850089F7F5 /* RACEXTScope.h in Headers */,
-				07DB3C9E1E7136500089F7F5 /* RACCompoundDisposable.h in Headers */,
-				07DB3C9C1E7136500089F7F5 /* NSObject+RACKVOWrapper.h in Headers */,
+				07DB3CAF1E7138850089F7F5 /* KAGRACEXTScope.h in Headers */,
+				07DB3C9E1E7136500089F7F5 /* KAGRACCompoundDisposable.h in Headers */,
+				07DB3C9C1E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h in Headers */,
 				07DB3C9A1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h in Headers */,
-				07DB3CA81E7138270089F7F5 /* RACKVOProxy.h in Headers */,
+				07DB3CA81E7138270089F7F5 /* KAGRACKVOProxy.h in Headers */,
 				07DB3C881E7133A20089F7F5 /* NSObject+KAGExtensions.h in Headers */,
-				07DB3CA01E7136500089F7F5 /* RACKVOTrampoline.h in Headers */,
-				07DB3CA21E7136500089F7F5 /* RACScopedDisposable.h in Headers */,
-				07DB3CAC1E7138540089F7F5 /* RACEXTRuntimeExtensions.h in Headers */,
-				07DB3CB41E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.h in Headers */,
+				07DB3CA01E7136500089F7F5 /* KAGRACKVOTrampoline.h in Headers */,
+				07DB3CA21E7136500089F7F5 /* KAGRACScopedDisposable.h in Headers */,
+				07DB3CAC1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h in Headers */,
+				07DB3CB41E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
 				07DB3C8C1E7135AC0089F7F5 /* KAGRACDisposable.h in Headers */,
 				072628281E70E49800511F80 /* Agamotto.h in Headers */,
-				07DB3CA41E7136500089F7F5 /* RACSerialDisposable.h in Headers */,
-				07DB3CB11E7138940089F7F5 /* RACmetamacros.h in Headers */,
+				07DB3CA41E7136500089F7F5 /* KAGRACSerialDisposable.h in Headers */,
+				07DB3CB11E7138940089F7F5 /* KAGRACmetamacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,15 +330,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07DB3C9F1E7136500089F7F5 /* RACCompoundDisposable.m in Sources */,
-				07DB3CAD1E7138540089F7F5 /* RACEXTRuntimeExtensions.m in Sources */,
+				07DB3C9F1E7136500089F7F5 /* KAGRACCompoundDisposable.m in Sources */,
+				07DB3CAD1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m in Sources */,
 				07DB3C9B1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m in Sources */,
-				07DB3CB51E7138AC0089F7F5 /* NSString+RACKeyPathUtilities.m in Sources */,
-				07DB3CA31E7136500089F7F5 /* RACScopedDisposable.m in Sources */,
-				07DB3CA91E7138270089F7F5 /* RACKVOProxy.m in Sources */,
-				07DB3CA11E7136500089F7F5 /* RACKVOTrampoline.m in Sources */,
-				07DB3CA51E7136500089F7F5 /* RACSerialDisposable.m in Sources */,
-				07DB3C9D1E7136500089F7F5 /* NSObject+RACKVOWrapper.m in Sources */,
+				07DB3CB51E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m in Sources */,
+				07DB3CA31E7136500089F7F5 /* KAGRACScopedDisposable.m in Sources */,
+				07DB3CA91E7138270089F7F5 /* KAGRACKVOProxy.m in Sources */,
+				07DB3CA11E7136500089F7F5 /* KAGRACKVOTrampoline.m in Sources */,
+				07DB3CA51E7136500089F7F5 /* KAGRACSerialDisposable.m in Sources */,
+				07DB3C9D1E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m in Sources */,
 				07DB3C8D1E7135AC0089F7F5 /* KAGRACDisposable.m in Sources */,
 				07DB3C891E7133A20089F7F5 /* NSObject+KAGExtensions.m in Sources */,
 			);

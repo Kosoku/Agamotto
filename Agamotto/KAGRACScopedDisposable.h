@@ -1,5 +1,5 @@
 //
-//  RACScopedDisposable.h
+//  KAGRACScopedDisposable.h
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 3/28/12.
@@ -9,7 +9,7 @@
 #import "KAGRACDisposable.h"
 
 /// A disposable that calls its own -dispose when it is dealloc'd.
-@interface RACScopedDisposable : KAGRACDisposable
+@interface KAGRACScopedDisposable : KAGRACDisposable
 
 /// Creates a new scoped disposable that will also dispose of the given
 /// disposable when it is dealloc'd.

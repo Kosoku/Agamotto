@@ -1,24 +1,24 @@
 //
-//  RACCompoundDisposable.m
+//  KAGRACCompoundDisposable.m
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 11/30/12.
 //  Copyright (c) 2012 GitHub, Inc. All rights reserved.
 //
 
-#import "RACCompoundDisposable.h"
+#import "KAGRACCompoundDisposable.h"
 
 #import <os/lock.h>
 
 // The number of child disposables for which space will be reserved directly in
-// `RACCompoundDisposable`.
+// `KAGRACCompoundDisposable`.
 //
 // This number has been empirically determined to provide a good tradeoff
-// between performance, memory usage, and `RACCompoundDisposable` instance size
+// between performance, memory usage, and `KAGRACCompoundDisposable` instance size
 // in a moderately complex GUI application.
 //
 // Profile any change!
-#define RACCompoundDisposableInlineCount 2
+#define KAGRACCompoundDisposableInlineCount 2
 
 static CFMutableArrayRef RACCreateDisposablesArray(void) {
 	// Compare values using only pointer equality.
@@ -28,18 +28,18 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 	return CFArrayCreateMutable(NULL, 0, &callbacks);
 }
 
-@interface RACCompoundDisposable () {
+@interface KAGRACCompoundDisposable () {
 	// Used for synchronization.
 	os_unfair_lock _spinLock;
 
-	#if RACCompoundDisposableInlineCount
+	#if KAGRACCompoundDisposableInlineCount
 	// A fast array to the first N of the receiver's disposables.
 	//
 	// Once this is full, `_disposables` will be created and used for additional
 	// disposables.
 	//
 	// This array should only be manipulated while _spinLock is held.
-	KAGRACDisposable *_inlineDisposables[RACCompoundDisposableInlineCount];
+	KAGRACDisposable *_inlineDisposables[KAGRACCompoundDisposableInlineCount];
 	#endif
 
 	// Contains the receiver's disposables.
@@ -56,7 +56,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 
 @end
 
-@implementation RACCompoundDisposable
+@implementation KAGRACCompoundDisposable
 
 #pragma mark Properties
 
@@ -84,20 +84,20 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
     
     _spinLock = OS_UNFAIR_LOCK_INIT;
     
-	#if RACCompoundDisposableInlineCount
+	#if KAGRACCompoundDisposableInlineCount
 	[otherDisposables enumerateObjectsUsingBlock:^(KAGRACDisposable *disposable, NSUInteger index, BOOL *stop) {
 		_inlineDisposables[index] = disposable;
 
 		// Stop after this iteration if we've reached the end of the inlined
 		// array.
-		if (index == RACCompoundDisposableInlineCount - 1) *stop = YES;
+		if (index == KAGRACCompoundDisposableInlineCount - 1) *stop = YES;
 	}];
 	#endif
 
-	if (otherDisposables.count > RACCompoundDisposableInlineCount) {
+	if (otherDisposables.count > KAGRACCompoundDisposableInlineCount) {
 		_disposables = RACCreateDisposablesArray();
 
-		CFRange range = CFRangeMake(RACCompoundDisposableInlineCount, (CFIndex)otherDisposables.count - RACCompoundDisposableInlineCount);
+		CFRange range = CFRangeMake(KAGRACCompoundDisposableInlineCount, (CFIndex)otherDisposables.count - KAGRACCompoundDisposableInlineCount);
 		CFArrayAppendArray(_disposables, (__bridge CFArrayRef)otherDisposables, range);
 	}
 
@@ -110,8 +110,8 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 }
 
 - (void)dealloc {
-	#if RACCompoundDisposableInlineCount
-	for (unsigned i = 0; i < RACCompoundDisposableInlineCount; i++) {
+	#if KAGRACCompoundDisposableInlineCount
+	for (unsigned i = 0; i < KAGRACCompoundDisposableInlineCount; i++) {
 		_inlineDisposables[i] = nil;
 	}
 	#endif
@@ -135,8 +135,8 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 		if (_disposed) {
 			shouldDispose = YES;
 		} else {
-			#if RACCompoundDisposableInlineCount
-			for (unsigned i = 0; i < RACCompoundDisposableInlineCount; i++) {
+			#if KAGRACCompoundDisposableInlineCount
+			for (unsigned i = 0; i < KAGRACCompoundDisposableInlineCount; i++) {
 				if (_inlineDisposables[i] == nil) {
 					_inlineDisposables[i] = disposable;
 					goto foundSlot;
@@ -147,11 +147,11 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 			if (_disposables == NULL) _disposables = RACCreateDisposablesArray();
 			CFArrayAppendValue(_disposables, (__bridge void *)disposable);
 
-//			if (RACCOMPOUNDDISPOSABLE_ADDED_ENABLED()) {
-//				RACCOMPOUNDDISPOSABLE_ADDED(self.description.UTF8String, disposable.description.UTF8String, CFArrayGetCount(_disposables) + RACCompoundDisposableInlineCount);
+//			if (KAGRACCompoundDisposable_ADDED_ENABLED()) {
+//				KAGRACCompoundDisposable_ADDED(self.description.UTF8String, disposable.description.UTF8String, CFArrayGetCount(_disposables) + KAGRACCompoundDisposableInlineCount);
 //			}
 
-		#if RACCompoundDisposableInlineCount
+		#if KAGRACCompoundDisposableInlineCount
 		foundSlot:;
 		#endif
 		}
@@ -169,8 +169,8 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 	os_unfair_lock_lock(&_spinLock);
 	{
 		if (!_disposed) {
-			#if RACCompoundDisposableInlineCount
-			for (unsigned i = 0; i < RACCompoundDisposableInlineCount; i++) {
+			#if KAGRACCompoundDisposableInlineCount
+			for (unsigned i = 0; i < KAGRACCompoundDisposableInlineCount; i++) {
 				if (_inlineDisposables[i] == disposable) _inlineDisposables[i] = nil;
 			}
 			#endif
@@ -184,8 +184,8 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 					}
 				}
 
-//				if (RACCOMPOUNDDISPOSABLE_REMOVED_ENABLED()) {
-//					RACCOMPOUNDDISPOSABLE_REMOVED(self.description.UTF8String, disposable.description.UTF8String, CFArrayGetCount(_disposables) + RACCompoundDisposableInlineCount);
+//				if (KAGRACCompoundDisposable_REMOVED_ENABLED()) {
+//					KAGRACCompoundDisposable_REMOVED(self.description.UTF8String, disposable.description.UTF8String, CFArrayGetCount(_disposables) + KAGRACCompoundDisposableInlineCount);
 //				}
 			}
 		}
@@ -201,8 +201,8 @@ static void disposeEach(const void *value, void *context) {
 }
 
 - (void)dispose {
-	#if RACCompoundDisposableInlineCount
-	KAGRACDisposable *inlineCopy[RACCompoundDisposableInlineCount];
+	#if KAGRACCompoundDisposableInlineCount
+	KAGRACDisposable *inlineCopy[KAGRACCompoundDisposableInlineCount];
 	#endif
 
 	CFArrayRef remainingDisposables = NULL;
@@ -211,8 +211,8 @@ static void disposeEach(const void *value, void *context) {
 	{
 		_disposed = YES;
 
-		#if RACCompoundDisposableInlineCount
-		for (unsigned i = 0; i < RACCompoundDisposableInlineCount; i++) {
+		#if KAGRACCompoundDisposableInlineCount
+		for (unsigned i = 0; i < KAGRACCompoundDisposableInlineCount; i++) {
 			inlineCopy[i] = _inlineDisposables[i];
 			_inlineDisposables[i] = nil;
 		}
@@ -223,10 +223,10 @@ static void disposeEach(const void *value, void *context) {
 	}
 	os_unfair_lock_unlock(&_spinLock);
 
-	#if RACCompoundDisposableInlineCount
+	#if KAGRACCompoundDisposableInlineCount
 	// Dispose outside of the lock in case the compound disposable is used
 	// recursively.
-	for (unsigned i = 0; i < RACCompoundDisposableInlineCount; i++) {
+	for (unsigned i = 0; i < KAGRACCompoundDisposableInlineCount; i++) {
 		[inlineCopy[i] dispose];
 	}
 	#endif

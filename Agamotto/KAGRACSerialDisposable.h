@@ -1,5 +1,5 @@
 //
-//  RACSerialDisposable.h
+//  KAGRACSerialDisposable.h
 //  ReactiveCocoa
 //
 //  Created by Justin Spahr-Summers on 2013-07-22.
@@ -10,7 +10,7 @@
 
 /// A disposable that contains exactly one other disposable and allows it to be
 /// swapped out atomically.
-@interface RACSerialDisposable : KAGRACDisposable
+@interface KAGRACSerialDisposable : KAGRACDisposable
 
 /// The inner disposable managed by the serial disposable.
 ///
@@ -28,7 +28,7 @@
 ///
 /// disposable - The value to set for `disposable`. This may be nil.
 ///
-/// Returns a RACSerialDisposable, or nil if an error occurs.
+/// Returns a KAGRACSerialDisposable, or nil if an error occurs.
 + (instancetype)serialDisposableWithDisposable:(KAGRACDisposable *)disposable;
 
 /// Atomically swaps the receiver's `disposable` for `newDisposable`.

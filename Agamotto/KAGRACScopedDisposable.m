@@ -1,14 +1,14 @@
 //
-//  RACScopedDisposable.m
+//  KAGRACScopedDisposable.m
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 3/28/12.
 //  Copyright (c) 2012 GitHub, Inc. All rights reserved.
 //
 
-#import "RACScopedDisposable.h"
+#import "KAGRACScopedDisposable.h"
 
-@implementation RACScopedDisposable
+@implementation KAGRACScopedDisposable
 
 #pragma mark Lifecycle
 
@@ -24,7 +24,7 @@
 
 #pragma mark KAGRACDisposable
 
-- (RACScopedDisposable *)asScopedDisposable {
+- (KAGRACScopedDisposable *)asScopedDisposable {
 	// totally already are
 	return self;
 }

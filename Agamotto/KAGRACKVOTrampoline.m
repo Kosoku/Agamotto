@@ -1,17 +1,17 @@
 //
-//  RACKVOTrampoline.m
+//  KAGRACKVOTrampoline.m
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 1/15/13.
 //  Copyright (c) 2013 GitHub, Inc. All rights reserved.
 //
 
-#import "RACKVOTrampoline.h"
+#import "KAGRACKVOTrampoline.h"
 #import "NSObject+KAGRACDeallocating.h"
-#import "RACCompoundDisposable.h"
-#import "RACKVOProxy.h"
+#import "KAGRACCompoundDisposable.h"
+#import "KAGRACKVOProxy.h"
 
-@interface RACKVOTrampoline ()
+@interface KAGRACKVOTrampoline ()
 
 // The keypath which the trampoline is observing.
 @property (nonatomic, readonly, copy) NSString *keyPath;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation RACKVOTrampoline
+@implementation KAGRACKVOTrampoline
 
 #pragma mark Lifecycle
 
@@ -46,8 +46,8 @@
 	_unsafeTarget = strongTarget;
 	_observer = observer;
 
-	[RACKVOProxy.sharedProxy addObserver:self forContext:(__bridge void *)self];
-	[strongTarget addObserver:RACKVOProxy.sharedProxy forKeyPath:self.keyPath options:options context:(__bridge void *)self];
+	[KAGRACKVOProxy.sharedProxy addObserver:self forContext:(__bridge void *)self];
+	[strongTarget addObserver:KAGRACKVOProxy.sharedProxy forKeyPath:self.keyPath options:options context:(__bridge void *)self];
 
 	[strongTarget.rac_deallocDisposable addDisposable:self];
 	[self.observer.rac_deallocDisposable addDisposable:self];
@@ -82,8 +82,8 @@
 	[target.rac_deallocDisposable removeDisposable:self];
 	[observer.rac_deallocDisposable removeDisposable:self];
 
-	[target removeObserver:RACKVOProxy.sharedProxy forKeyPath:self.keyPath context:(__bridge void *)self];
-	[RACKVOProxy.sharedProxy removeObserver:self forContext:(__bridge void *)self];
+	[target removeObserver:KAGRACKVOProxy.sharedProxy forKeyPath:self.keyPath context:(__bridge void *)self];
+	[KAGRACKVOProxy.sharedProxy removeObserver:self forContext:(__bridge void *)self];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

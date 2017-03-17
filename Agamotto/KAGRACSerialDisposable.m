@@ -1,16 +1,16 @@
 //
-//  RACSerialDisposable.m
+//  KAGRACSerialDisposable.m
 //  ReactiveCocoa
 //
 //  Created by Justin Spahr-Summers on 2013-07-22.
 //  Copyright (c) 2013 GitHub, Inc. All rights reserved.
 //
 
-#import "RACSerialDisposable.h"
+#import "KAGRACSerialDisposable.h"
 
 #import <os/lock.h>
 
-@interface RACSerialDisposable () {
+@interface KAGRACSerialDisposable () {
 	// The receiver's `disposable`. This variable must only be referenced while
 	// _spinLock is held.
 	KAGRACDisposable * _disposable;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation RACSerialDisposable
+@implementation KAGRACSerialDisposable
 
 #pragma mark Properties
 
@@ -53,7 +53,7 @@
 #pragma mark Lifecycle
 
 + (instancetype)serialDisposableWithDisposable:(KAGRACDisposable *)disposable {
-	RACSerialDisposable *serialDisposable = [[self alloc] init];
+	KAGRACSerialDisposable *serialDisposable = [[self alloc] init];
 	serialDisposable.disposable = disposable;
 	return serialDisposable;
 }

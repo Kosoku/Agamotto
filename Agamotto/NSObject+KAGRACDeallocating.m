@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+KAGRACDeallocating.h"
-#import "RACCompoundDisposable.h"
+#import "KAGRACCompoundDisposable.h"
 #import "KAGRACDisposable.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
@@ -34,7 +34,7 @@ static void swizzleDeallocIfNeeded(Class classToSwizzle) {
 		__block void (*originalDealloc)(__unsafe_unretained id, SEL) = NULL;
 
 		id newDealloc = ^(__unsafe_unretained id self) {
-			RACCompoundDisposable *compoundDisposable = objc_getAssociatedObject(self, RACObjectCompoundDisposable);
+			KAGRACCompoundDisposable *compoundDisposable = objc_getAssociatedObject(self, RACObjectCompoundDisposable);
 			[compoundDisposable dispose];
 
 			if (originalDealloc == NULL) {
@@ -70,14 +70,14 @@ static void swizzleDeallocIfNeeded(Class classToSwizzle) {
 
 @implementation NSObject (KAGRACDeallocating)
 
-- (RACCompoundDisposable *)rac_deallocDisposable {
+- (KAGRACCompoundDisposable *)rac_deallocDisposable {
 	@synchronized (self) {
-		RACCompoundDisposable *compoundDisposable = objc_getAssociatedObject(self, RACObjectCompoundDisposable);
+		KAGRACCompoundDisposable *compoundDisposable = objc_getAssociatedObject(self, RACObjectCompoundDisposable);
 		if (compoundDisposable != nil) return compoundDisposable;
 
 		swizzleDeallocIfNeeded(self.class);
 
-		compoundDisposable = [RACCompoundDisposable compoundDisposable];
+		compoundDisposable = [KAGRACCompoundDisposable compoundDisposable];
 		objc_setAssociatedObject(self, RACObjectCompoundDisposable, compoundDisposable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
 		return compoundDisposable;

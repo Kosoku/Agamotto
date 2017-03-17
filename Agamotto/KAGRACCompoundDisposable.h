@@ -1,5 +1,5 @@
 //
-//  RACCompoundDisposable.h
+//  KAGRACCompoundDisposable.h
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 11/30/12.
@@ -15,7 +15,7 @@
 /// of, the given disposable is immediately disposed. This allows a compound
 /// disposable to act as a stand-in for a disposable that will be delivered
 /// asynchronously.
-@interface RACCompoundDisposable : KAGRACDisposable
+@interface KAGRACCompoundDisposable : KAGRACDisposable
 
 /// Creates and returns a new compound disposable.
 + (instancetype)compoundDisposable;

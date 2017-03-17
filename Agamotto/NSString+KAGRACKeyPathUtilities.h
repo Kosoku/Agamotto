@@ -1,5 +1,5 @@
 //
-//  NSString+RACKeyPathUtilities.h
+//  NSString+KAGRACKeyPathUtilities.h
 //  ReactiveCocoa
 //
 //  Created by Uri Baghin on 05/05/2013.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // A private category of methods to extract parts of a key path.
-@interface NSString (RACKeyPathUtilities)
+@interface NSString (KAGRACKeyPathUtilities)
 
 // Returns an array of the components of the receiver.
 //
