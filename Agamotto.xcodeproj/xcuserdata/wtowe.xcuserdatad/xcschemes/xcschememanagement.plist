@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Agamotto-macOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Agamotto.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +17,27 @@
 		<key>AgamottoDemo-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
+		</dict>
+		<key>AgamottoDemo-macOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>072628221E70E49800511F80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07A547D91E7C43FA00A6C4A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07A547E61E7C44A400A6C4A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
