@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 GitHub, Inc. All rights reserved.
 //
 
-#import "NSObject+RACDeallocating.h"
+#import "NSObject+KAGRACDeallocating.h"
 #import "RACCompoundDisposable.h"
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
 
@@ -68,7 +68,7 @@ static void swizzleDeallocIfNeeded(Class classToSwizzle) {
 	}
 }
 
-@implementation NSObject (RACDeallocating)
+@implementation NSObject (KAGRACDeallocating)
 
 - (RACCompoundDisposable *)rac_deallocDisposable {
 	@synchronized (self) {

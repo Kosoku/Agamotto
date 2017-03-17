@@ -11,7 +11,7 @@
 @class RACCompoundDisposable;
 @class RACDisposable;
 
-@interface NSObject (RACDeallocating)
+@interface NSObject (KAGRACDeallocating)
 
 /// The compound disposable which will be disposed of when the receiver is
 /// deallocated.
