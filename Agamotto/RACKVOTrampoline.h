@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "NSObject+RACKVOWrapper.h"
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 
 // A private trampoline object that represents a KVO observation.
 //
 // Disposing of the trampoline will stop observation.
-@interface RACKVOTrampoline : RACDisposable
+@interface RACKVOTrampoline : KAGRACDisposable
 
 // Initializes the receiver with the given parameters.
 //

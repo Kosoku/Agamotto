@@ -9,16 +9,16 @@
 #import "NSObject+RACKVOWrapper.h"
 #import "RACEXTRuntimeExtensions.h"
 #import "RACEXTScope.h"
-#import "NSObject+RACDeallocating.h"
+#import "NSObject+KAGRACDeallocating.h"
 #import "NSString+RACKeyPathUtilities.h"
 #import "RACCompoundDisposable.h"
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 #import "RACKVOTrampoline.h"
 #import "RACSerialDisposable.h"
 
 @implementation NSObject (RACKVOWrapper)
 
-- (RACDisposable *)rac_observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options observer:(__weak NSObject *)weakObserver block:(void (^)(id, NSDictionary *, BOOL, BOOL))block {
+- (KAGRACDisposable *)rac_observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options observer:(__weak NSObject *)weakObserver block:(void (^)(id, NSDictionary *, BOOL, BOOL))block {
 	NSCParameterAssert(block != nil);
 	NSCParameterAssert(keyPath.rac_keyPathComponents.count > 0);
 
@@ -87,12 +87,12 @@
 		};
 
 		RACCompoundDisposable *valueDisposable = value.rac_deallocDisposable;
-		RACDisposable *deallocDisposable = [RACDisposable disposableWithBlock:^{
+		KAGRACDisposable *deallocDisposable = [KAGRACDisposable disposableWithBlock:^{
 			block(nil, change, YES, keyPathHasOneComponent);
 		}];
 
 		[valueDisposable addDisposable:deallocDisposable];
-		[firstComponentDisposable() addDisposable:[RACDisposable disposableWithBlock:^{
+		[firstComponentDisposable() addDisposable:[KAGRACDisposable disposableWithBlock:^{
 			[valueDisposable removeDisposable:deallocDisposable];
 		}]];
 	};
@@ -100,7 +100,7 @@
 	// Adds the callback block to the remaining path components on the value. Also
 	// adds the logic to clean up the callbacks to the firstComponentDisposable.
 	void (^addObserverToValue)(NSObject *) = ^(NSObject *value) {
-		RACDisposable *observerDisposable = [value rac_observeKeyPath:keyPathTail options:(options & ~NSKeyValueObservingOptionInitial) observer:weakObserver block:block];
+		KAGRACDisposable *observerDisposable = [value rac_observeKeyPath:keyPathTail options:(options & ~NSKeyValueObservingOptionInitial) observer:weakObserver block:block];
 		[firstComponentDisposable() addDisposable:observerDisposable];
 	};
 
@@ -140,7 +140,7 @@
 
 		// Create a new firstComponentDisposable while getting rid of the old one at
 		// the same time, in case this is being called concurrently.
-		RACDisposable *oldFirstComponentDisposable = [firstComponentSerialDisposable swapInDisposable:[RACCompoundDisposable compoundDisposable]];
+		KAGRACDisposable *oldFirstComponentDisposable = [firstComponentSerialDisposable swapInDisposable:[RACCompoundDisposable compoundDisposable]];
 		[oldFirstComponentDisposable dispose];
 
 		addDeallocObserverToPropertyValue(value);
@@ -190,7 +190,7 @@
 	[observerDisposable addDisposable:disposable];
 	[selfDisposable addDisposable:disposable];
 
-	return [RACDisposable disposableWithBlock:^{
+	return [KAGRACDisposable disposableWithBlock:^{
 		[disposable dispose];
 		[observerDisposable removeDisposable:disposable];
 		[selfDisposable removeDisposable:disposable];

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class RACCompoundDisposable;
-@class RACDisposable;
+@class KAGRACDisposable;
 
 @interface NSObject (KAGRACDeallocating)
 

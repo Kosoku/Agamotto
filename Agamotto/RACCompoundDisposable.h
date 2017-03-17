@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 GitHub, Inc. All rights reserved.
 //
 
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 
 /// A disposable of disposables. When it is disposed, it disposes of all its
 /// contained disposables.
@@ -15,7 +15,7 @@
 /// of, the given disposable is immediately disposed. This allows a compound
 /// disposable to act as a stand-in for a disposable that will be delivered
 /// asynchronously.
-@interface RACCompoundDisposable : RACDisposable
+@interface RACCompoundDisposable : KAGRACDisposable
 
 /// Creates and returns a new compound disposable.
 + (instancetype)compoundDisposable;
@@ -31,7 +31,7 @@
 ///
 /// disposable - The disposable to add. This may be nil, in which case nothing
 ///              happens.
-- (void)addDisposable:(RACDisposable *)disposable;
+- (void)addDisposable:(KAGRACDisposable *)disposable;
 
 /// Removes the specified disposable from the compound disposable (regardless of
 /// its disposed status), or does nothing if it's not in the compound disposable.
@@ -43,6 +43,6 @@
 ///
 /// disposable - The disposable to remove. This argument may be nil (to make the
 ///              use of weak references easier).
-- (void)removeDisposable:(RACDisposable *)disposable;
+- (void)removeDisposable:(KAGRACDisposable *)disposable;
 
 @end

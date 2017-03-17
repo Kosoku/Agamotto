@@ -1,5 +1,5 @@
 //
-//  RACDisposable.m
+//  KAGRACDisposable.m
 //  ReactiveCocoa
 //
 //  Created by Josh Abernathy on 3/16/12.

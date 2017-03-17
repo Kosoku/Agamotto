@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 GitHub, Inc. All rights reserved.
 //
 
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 
 /// A disposable that contains exactly one other disposable and allows it to be
 /// swapped out atomically.
-@interface RACSerialDisposable : RACDisposable
+@interface RACSerialDisposable : KAGRACDisposable
 
 /// The inner disposable managed by the serial disposable.
 ///
@@ -22,14 +22,14 @@
 /// this property, then set the property to nil. If any new disposable is set
 /// after the receiver is disposed, it will be disposed immediately and this
 /// property will remain set to nil.
-@property (atomic, strong) RACDisposable *disposable;
+@property (atomic, strong) KAGRACDisposable *disposable;
 
 /// Creates a serial disposable which will wrap the given disposable.
 ///
 /// disposable - The value to set for `disposable`. This may be nil.
 ///
 /// Returns a RACSerialDisposable, or nil if an error occurs.
-+ (instancetype)serialDisposableWithDisposable:(RACDisposable *)disposable;
++ (instancetype)serialDisposableWithDisposable:(KAGRACDisposable *)disposable;
 
 /// Atomically swaps the receiver's `disposable` for `newDisposable`.
 ///
@@ -38,6 +38,6 @@
 ///                 will remain set to nil. This argument may be nil.
 ///
 /// Returns the previous value for the `disposable` property.
-- (RACDisposable *)swapInDisposable:(RACDisposable *)newDisposable;
+- (KAGRACDisposable *)swapInDisposable:(KAGRACDisposable *)newDisposable;
 
 @end

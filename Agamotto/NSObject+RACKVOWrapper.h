@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class RACDisposable;
+@class KAGRACDisposable;
 @class RACKVOTrampoline;
 
 // A private category providing a block based interface to KVO.
@@ -33,7 +33,7 @@
 //            be nil.
 //
 // Returns a disposable that can be used to stop the observation.
-- (RACDisposable *)rac_observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options observer:(__weak NSObject *)observer block:(void (^)(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent))block;
+- (KAGRACDisposable *)rac_observeKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options observer:(__weak NSObject *)observer block:(void (^)(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent))block;
 
 @end
 

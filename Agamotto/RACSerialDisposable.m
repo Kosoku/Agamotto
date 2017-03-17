@@ -13,7 +13,7 @@
 @interface RACSerialDisposable () {
 	// The receiver's `disposable`. This variable must only be referenced while
 	// _spinLock is held.
-	RACDisposable * _disposable;
+	KAGRACDisposable * _disposable;
 
 	// YES if the receiver has been disposed. This variable must only be modified
 	// while _spinLock is held.
@@ -36,8 +36,8 @@
 	return _disposed;
 }
 
-- (RACDisposable *)disposable {
-	RACDisposable *result;
+- (KAGRACDisposable *)disposable {
+	KAGRACDisposable *result;
 
 	os_unfair_lock_lock(&_spinLock);
 	result = _disposable;
@@ -46,13 +46,13 @@
 	return result;
 }
 
-- (void)setDisposable:(RACDisposable *)disposable {
+- (void)setDisposable:(KAGRACDisposable *)disposable {
 	[self swapInDisposable:disposable];
 }
 
 #pragma mark Lifecycle
 
-+ (instancetype)serialDisposableWithDisposable:(RACDisposable *)disposable {
++ (instancetype)serialDisposableWithDisposable:(KAGRACDisposable *)disposable {
 	RACSerialDisposable *serialDisposable = [[self alloc] init];
 	serialDisposable.disposable = disposable;
 	return serialDisposable;
@@ -62,15 +62,15 @@
 	self = [self init];
 	if (self == nil) return nil;
 
-	self.disposable = [RACDisposable disposableWithBlock:block];
+	self.disposable = [KAGRACDisposable disposableWithBlock:block];
 
 	return self;
 }
 
 #pragma mark Inner Disposable
 
-- (RACDisposable *)swapInDisposable:(RACDisposable *)newDisposable {
-	RACDisposable *existingDisposable;
+- (KAGRACDisposable *)swapInDisposable:(KAGRACDisposable *)newDisposable {
+	KAGRACDisposable *existingDisposable;
 	BOOL alreadyDisposed;
 
 	os_unfair_lock_lock(&_spinLock);
@@ -92,7 +92,7 @@
 #pragma mark Disposal
 
 - (void)dispose {
-	RACDisposable *existingDisposable;
+	KAGRACDisposable *existingDisposable;
 
 	os_unfair_lock_lock(&_spinLock);
 	if (!_disposed) {

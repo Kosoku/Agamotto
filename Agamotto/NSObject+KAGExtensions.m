@@ -17,11 +17,11 @@
 
 #import <objc/runtime.h>
 
-@interface RACDisposable (KAGExtensionsPrivate) <KAGObserver>
+@interface KAGRACDisposable (KAGExtensionsPrivate) <KAGObserver>
 @property (readwrite,copy,nonatomic) NSSet<NSString *> *observingKeyPaths;
 @end
 
-@implementation RACDisposable (KAGExtensionsPrivate)
+@implementation KAGRACDisposable (KAGExtensionsPrivate)
 
 static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
 
@@ -51,7 +51,7 @@ static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
     NSMutableArray *disposables = [[NSMutableArray alloc] init];
     
     for (NSString *keyPath in uniqueKeyPaths) {
-        RACDisposable *disposable = [target rac_observeKeyPath:keyPath options:options observer:nil block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
+        KAGRACDisposable *disposable = [target rac_observeKeyPath:keyPath options:options observer:nil block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
             block(keyPath, value, change);
         }];
         

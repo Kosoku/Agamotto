@@ -39,7 +39,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 	// disposables.
 	//
 	// This array should only be manipulated while _spinLock is held.
-	RACDisposable *_inlineDisposables[RACCompoundDisposableInlineCount];
+	KAGRACDisposable *_inlineDisposables[RACCompoundDisposableInlineCount];
 	#endif
 
 	// Contains the receiver's disposables.
@@ -85,7 +85,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
     _spinLock = OS_UNFAIR_LOCK_INIT;
     
 	#if RACCompoundDisposableInlineCount
-	[otherDisposables enumerateObjectsUsingBlock:^(RACDisposable *disposable, NSUInteger index, BOOL *stop) {
+	[otherDisposables enumerateObjectsUsingBlock:^(KAGRACDisposable *disposable, NSUInteger index, BOOL *stop) {
 		_inlineDisposables[index] = disposable;
 
 		// Stop after this iteration if we've reached the end of the inlined
@@ -105,7 +105,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 }
 
 - (id)initWithBlock:(void (^)(void))block {
-	RACDisposable *disposable = [RACDisposable disposableWithBlock:block];
+	KAGRACDisposable *disposable = [KAGRACDisposable disposableWithBlock:block];
 	return [self initWithDisposables:@[ disposable ]];
 }
 
@@ -124,7 +124,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 
 #pragma mark Addition and Removal
 
-- (void)addDisposable:(RACDisposable *)disposable {
+- (void)addDisposable:(KAGRACDisposable *)disposable {
 	NSCParameterAssert(disposable != self);
 	if (disposable == nil || disposable.disposed) return;
 
@@ -163,7 +163,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 	if (shouldDispose) [disposable dispose];
 }
 
-- (void)removeDisposable:(RACDisposable *)disposable {
+- (void)removeDisposable:(KAGRACDisposable *)disposable {
 	if (disposable == nil) return;
 
 	os_unfair_lock_lock(&_spinLock);
@@ -193,16 +193,16 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 	os_unfair_lock_unlock(&_spinLock);
 }
 
-#pragma mark RACDisposable
+#pragma mark KAGRACDisposable
 
 static void disposeEach(const void *value, void *context) {
-	RACDisposable *disposable = (__bridge id)value;
+	KAGRACDisposable *disposable = (__bridge id)value;
 	[disposable dispose];
 }
 
 - (void)dispose {
 	#if RACCompoundDisposableInlineCount
-	RACDisposable *inlineCopy[RACCompoundDisposableInlineCount];
+	KAGRACDisposable *inlineCopy[RACCompoundDisposableInlineCount];
 	#endif
 
 	CFArrayRef remainingDisposables = NULL;

@@ -12,7 +12,7 @@
 
 #pragma mark Lifecycle
 
-+ (instancetype)scopedDisposableWithDisposable:(RACDisposable *)disposable {
++ (instancetype)scopedDisposableWithDisposable:(KAGRACDisposable *)disposable {
 	return [self disposableWithBlock:^{
 		[disposable dispose];
 	}];
@@ -22,7 +22,7 @@
 	[self dispose];
 }
 
-#pragma mark RACDisposable
+#pragma mark KAGRACDisposable
 
 - (RACScopedDisposable *)asScopedDisposable {
 	// totally already are
