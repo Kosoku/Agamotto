@@ -40,6 +40,38 @@
 		07A548161E7C456F00A6C4A1 /* KAGRACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CA71E7138270089F7F5 /* KAGRACKVOProxy.m */; };
 		07A548171E7C456F00A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CAB1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m */; };
 		07A548181E7C456F00A6C4A1 /* NSString+KAGRACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */; };
+		07A548271E7C4AF900A6C4A1 /* Agamotto.h in Headers */ = {isa = PBXBuildFile; fileRef = 072628261E70E49800511F80 /* Agamotto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A548281E7C4AF900A6C4A1 /* NSObject+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A548291E7C4AF900A6C4A1 /* KAGRACDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5482A1E7C4AF900A6C4A1 /* NSObject+KAGRACDeallocating.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8E1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5482B1E7C4AF900A6C4A1 /* NSObject+KAGRACKVOWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C901E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5482C1E7C4AF900A6C4A1 /* KAGRACCompoundDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C921E7136500089F7F5 /* KAGRACCompoundDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5482D1E7C4AF900A6C4A1 /* KAGRACKVOTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C941E7136500089F7F5 /* KAGRACKVOTrampoline.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5482E1E7C4AF900A6C4A1 /* KAGRACScopedDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C961E7136500089F7F5 /* KAGRACScopedDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5482F1E7C4AF900A6C4A1 /* KAGRACSerialDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C981E7136500089F7F5 /* KAGRACSerialDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548301E7C4AF900A6C4A1 /* KAGRACKVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CA61E7138270089F7F5 /* KAGRACKVOProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548311E7C4AF900A6C4A1 /* KAGRACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAA1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548321E7C4AF900A6C4A1 /* KAGRACEXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAE1E7138850089F7F5 /* KAGRACEXTScope.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548331E7C4AF900A6C4A1 /* KAGRACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB01E7138940089F7F5 /* KAGRACmetamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548341E7C4AF900A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB21E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548351E7C4B1100A6C4A1 /* NSObject+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */; };
+		07A548361E7C4B1100A6C4A1 /* KAGRACDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C8B1E7135AC0089F7F5 /* KAGRACDisposable.m */; };
+		07A548371E7C4B1100A6C4A1 /* NSObject+KAGRACDeallocating.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C8F1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m */; };
+		07A548381E7C4B1100A6C4A1 /* NSObject+KAGRACKVOWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C911E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m */; };
+		07A548391E7C4B1100A6C4A1 /* KAGRACCompoundDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C931E7136500089F7F5 /* KAGRACCompoundDisposable.m */; };
+		07A5483A1E7C4B1100A6C4A1 /* KAGRACKVOTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C951E7136500089F7F5 /* KAGRACKVOTrampoline.m */; };
+		07A5483B1E7C4B1100A6C4A1 /* KAGRACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C971E7136500089F7F5 /* KAGRACScopedDisposable.m */; };
+		07A5483C1E7C4B1100A6C4A1 /* KAGRACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C991E7136500089F7F5 /* KAGRACSerialDisposable.m */; };
+		07A5483D1E7C4B1100A6C4A1 /* KAGRACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CA71E7138270089F7F5 /* KAGRACKVOProxy.m */; };
+		07A5483E1E7C4B1100A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CAB1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m */; };
+		07A5483F1E7C4B1100A6C4A1 /* NSString+KAGRACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */; };
+		07A548481E7C4B2900A6C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548471E7C4B2900A6C4A1 /* main.m */; };
+		07A5484B1E7C4B2900A6C4A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5484A1E7C4B2900A6C4A1 /* AppDelegate.m */; };
+		07A5484E1E7C4B2900A6C4A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5484D1E7C4B2900A6C4A1 /* ViewController.m */; };
+		07A548511E7C4B2900A6C4A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A5484F1E7C4B2900A6C4A1 /* Main.storyboard */; };
+		07A548531E7C4B2900A6C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A548521E7C4B2900A6C4A1 /* Assets.xcassets */; };
+		07A548581E7C4B3400A6C4A1 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */; };
+		07A548591E7C4B3400A6C4A1 /* Agamotto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07DB3C881E7133A20089F7F5 /* NSObject+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DB3C891E7133A20089F7F5 /* NSObject+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */; };
 		07DB3C8C1E7135AC0089F7F5 /* KAGRACDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -81,6 +113,13 @@
 			remoteGlobalIDString = 07A547D91E7C43FA00A6C4A1;
 			remoteInfo = "Agamotto-macOS";
 		};
+		07A5485A1E7C4B3400A6C4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072628181E70E40C00511F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A5481D1E7C4A6B00A6C4A1;
+			remoteInfo = "Agamotto-tvOS";
+		};
 		07DB3CD11E713B510089F7F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 072628181E70E40C00511F80 /* Project object */;
@@ -98,6 +137,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07A547FC1E7C44BA00A6C4A1 /* Agamotto.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5485C1E7C4B3400A6C4A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07A548591E7C4B3400A6C4A1 /* Agamotto.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +170,17 @@
 		07A547F21E7C44A500A6C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07A547F51E7C44A500A6C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07A547F71E7C44A500A6C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Agamotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A548261E7C4A9900A6C4A1 /* Agamotto-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agamotto-tvOS-Info.plist"; sourceTree = "<group>"; };
+		07A548441E7C4B2900A6C4A1 /* AgamottoDemo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgamottoDemo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A548471E7C4B2900A6C4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07A548491E7C4B2900A6C4A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07A5484A1E7C4B2900A6C4A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07A5484C1E7C4B2900A6C4A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07A5484D1E7C4B2900A6C4A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07A548501E7C4B2900A6C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07A548521E7C4B2900A6C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07A548541E7C4B2900A6C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KAGExtensions.h"; sourceTree = "<group>"; };
 		07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KAGExtensions.m"; sourceTree = "<group>"; };
 		07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACDisposable.h; sourceTree = "<group>"; };
@@ -179,6 +240,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A5481A1E7C4A6B00A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548411E7C4B2900A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548581E7C4B3400A6C4A1 /* Agamotto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DB3CB71E713B420089F7F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +272,7 @@
 				072628251E70E49800511F80 /* Agamotto */,
 				07DB3CBB1E713B420089F7F5 /* AgamottoDemo-iOS */,
 				07A547E81E7C44A500A6C4A1 /* AgamottoDemo-macOS */,
+				07A548451E7C4B2900A6C4A1 /* AgamottoDemo-tvOS */,
 				072628241E70E49800511F80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,6 +284,8 @@
 				07DB3CBA1E713B420089F7F5 /* AgamottoDemo-iOS.app */,
 				07A547DA1E7C43FA00A6C4A1 /* Agamotto.framework */,
 				07A547E71E7C44A400A6C4A1 /* AgamottoDemo-macOS.app */,
+				07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */,
+				07A548441E7C4B2900A6C4A1 /* AgamottoDemo-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +305,7 @@
 			children = (
 				072628271E70E49800511F80 /* Agamotto-iOS-Info.plist */,
 				07A547E21E7C442E00A6C4A1 /* Agamotto-macOS-Info.plist */,
+				07A548261E7C4A9900A6C4A1 /* Agamotto-tvOS-Info.plist */,
 				0726282D1E70E57300511F80 /* Agamotto-Info.h */,
 			);
 			name = "Supporting Files";
@@ -289,6 +369,29 @@
 			isa = PBXGroup;
 			children = (
 				07A547ED1E7C44A500A6C4A1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07A548451E7C4B2900A6C4A1 /* AgamottoDemo-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				07A548491E7C4B2900A6C4A1 /* AppDelegate.h */,
+				07A5484A1E7C4B2900A6C4A1 /* AppDelegate.m */,
+				07A5484C1E7C4B2900A6C4A1 /* ViewController.h */,
+				07A5484D1E7C4B2900A6C4A1 /* ViewController.m */,
+				07A5484F1E7C4B2900A6C4A1 /* Main.storyboard */,
+				07A548521E7C4B2900A6C4A1 /* Assets.xcassets */,
+				07A548541E7C4B2900A6C4A1 /* Info.plist */,
+				07A548461E7C4B2900A6C4A1 /* Supporting Files */,
+			);
+			path = "AgamottoDemo-tvOS";
+			sourceTree = "<group>";
+		};
+		07A548461E7C4B2900A6C4A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A548471E7C4B2900A6C4A1 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,6 +465,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A5481B1E7C4A6B00A6C4A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548291E7C4AF900A6C4A1 /* KAGRACDisposable.h in Headers */,
+				07A548281E7C4AF900A6C4A1 /* NSObject+KAGExtensions.h in Headers */,
+				07A548321E7C4AF900A6C4A1 /* KAGRACEXTScope.h in Headers */,
+				07A5482F1E7C4AF900A6C4A1 /* KAGRACSerialDisposable.h in Headers */,
+				07A548311E7C4AF900A6C4A1 /* KAGRACEXTRuntimeExtensions.h in Headers */,
+				07A5482C1E7C4AF900A6C4A1 /* KAGRACCompoundDisposable.h in Headers */,
+				07A5482E1E7C4AF900A6C4A1 /* KAGRACScopedDisposable.h in Headers */,
+				07A5482A1E7C4AF900A6C4A1 /* NSObject+KAGRACDeallocating.h in Headers */,
+				07A5482B1E7C4AF900A6C4A1 /* NSObject+KAGRACKVOWrapper.h in Headers */,
+				07A5482D1E7C4AF900A6C4A1 /* KAGRACKVOTrampoline.h in Headers */,
+				07A548271E7C4AF900A6C4A1 /* Agamotto.h in Headers */,
+				07A548341E7C4AF900A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
+				07A548331E7C4AF900A6C4A1 /* KAGRACmetamacros.h in Headers */,
+				07A548301E7C4AF900A6C4A1 /* KAGRACKVOProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +544,43 @@
 			productReference = 07A547E71E7C44A400A6C4A1 /* AgamottoDemo-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		07A5481D1E7C4A6B00A6C4A1 /* Agamotto-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A548231E7C4A6B00A6C4A1 /* Build configuration list for PBXNativeTarget "Agamotto-tvOS" */;
+			buildPhases = (
+				07A548191E7C4A6B00A6C4A1 /* Sources */,
+				07A5481A1E7C4A6B00A6C4A1 /* Frameworks */,
+				07A5481B1E7C4A6B00A6C4A1 /* Headers */,
+				07A5481C1E7C4A6B00A6C4A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Agamotto-tvOS";
+			productName = "Agamotto-tvOS";
+			productReference = 07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07A548431E7C4B2900A6C4A1 /* AgamottoDemo-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A548551E7C4B2900A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-tvOS" */;
+			buildPhases = (
+				07A548401E7C4B2900A6C4A1 /* Sources */,
+				07A548411E7C4B2900A6C4A1 /* Frameworks */,
+				07A548421E7C4B2900A6C4A1 /* Resources */,
+				07A5485C1E7C4B3400A6C4A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A5485B1E7C4B3400A6C4A1 /* PBXTargetDependency */,
+			);
+			name = "AgamottoDemo-tvOS";
+			productName = "AgamottoDemo-tvOS";
+			productReference = 07A548441E7C4B2900A6C4A1 /* AgamottoDemo-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		07DB3CB91E713B420089F7F5 /* AgamottoDemo-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07DB3CCE1E713B420089F7F5 /* Build configuration list for PBXNativeTarget "AgamottoDemo-iOS" */;
@@ -460,6 +621,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					07A5481D1E7C4A6B00A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					07A548431E7C4B2900A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					07DB3CB91E713B420089F7F5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -481,8 +650,10 @@
 			targets = (
 				072628221E70E49800511F80 /* Agamotto-iOS */,
 				07A547D91E7C43FA00A6C4A1 /* Agamotto-macOS */,
+				07A5481D1E7C4A6B00A6C4A1 /* Agamotto-tvOS */,
 				07DB3CB91E713B420089F7F5 /* AgamottoDemo-iOS */,
 				07A547E61E7C44A400A6C4A1 /* AgamottoDemo-macOS */,
+				07A548431E7C4B2900A6C4A1 /* AgamottoDemo-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -508,6 +679,22 @@
 			files = (
 				07A547F31E7C44A500A6C4A1 /* Assets.xcassets in Resources */,
 				07A547F61E7C44A500A6C4A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5481C1E7C4A6B00A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548421E7C4B2900A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548531E7C4B2900A6C4A1 /* Assets.xcassets in Resources */,
+				07A548511E7C4B2900A6C4A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +757,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A548191E7C4A6B00A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A5483A1E7C4B1100A6C4A1 /* KAGRACKVOTrampoline.m in Sources */,
+				07A548361E7C4B1100A6C4A1 /* KAGRACDisposable.m in Sources */,
+				07A5483D1E7C4B1100A6C4A1 /* KAGRACKVOProxy.m in Sources */,
+				07A5483C1E7C4B1100A6C4A1 /* KAGRACSerialDisposable.m in Sources */,
+				07A548351E7C4B1100A6C4A1 /* NSObject+KAGExtensions.m in Sources */,
+				07A5483B1E7C4B1100A6C4A1 /* KAGRACScopedDisposable.m in Sources */,
+				07A548371E7C4B1100A6C4A1 /* NSObject+KAGRACDeallocating.m in Sources */,
+				07A5483E1E7C4B1100A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */,
+				07A548381E7C4B1100A6C4A1 /* NSObject+KAGRACKVOWrapper.m in Sources */,
+				07A5483F1E7C4B1100A6C4A1 /* NSString+KAGRACKeyPathUtilities.m in Sources */,
+				07A548391E7C4B1100A6C4A1 /* KAGRACCompoundDisposable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548401E7C4B2900A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A5484E1E7C4B2900A6C4A1 /* ViewController.m in Sources */,
+				07A5484B1E7C4B2900A6C4A1 /* AppDelegate.m in Sources */,
+				07A548481E7C4B2900A6C4A1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DB3CB61E713B420089F7F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,6 +803,11 @@
 			target = 07A547D91E7C43FA00A6C4A1 /* Agamotto-macOS */;
 			targetProxy = 07A547FD1E7C44BA00A6C4A1 /* PBXContainerItemProxy */;
 		};
+		07A5485B1E7C4B3400A6C4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A5481D1E7C4A6B00A6C4A1 /* Agamotto-tvOS */;
+			targetProxy = 07A5485A1E7C4B3400A6C4A1 /* PBXContainerItemProxy */;
+		};
 		07DB3CD21E713B510089F7F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 072628221E70E49800511F80 /* Agamotto-iOS */;
@@ -600,6 +820,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				07A547F51E7C44A500A6C4A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07A5484F1E7C4B2900A6C4A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A548501E7C4B2900A6C4A1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -979,6 +1207,226 @@
 			};
 			name = Release;
 		};
+		07A548241E7C4A6B00A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Agamotto/Agamotto-tvOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Agamotto/Agamotto-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.agamotto;
+				PRODUCT_NAME = Agamotto;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07A548251E7C4A6B00A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Agamotto/Agamotto-tvOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Agamotto/Agamotto-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.agamotto;
+				PRODUCT_NAME = Agamotto;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07A548561E7C4B2900A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AgamottoDemo-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		07A548571E7C4B2900A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AgamottoDemo-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		07DB3CCF1E713B420089F7F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1113,6 +1561,22 @@
 			buildConfigurations = (
 				07A547F91E7C44A500A6C4A1 /* Debug */,
 				07A547FA1E7C44A500A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A548231E7C4A6B00A6C4A1 /* Build configuration list for PBXNativeTarget "Agamotto-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A548241E7C4A6B00A6C4A1 /* Debug */,
+				07A548251E7C4A6B00A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A548551E7C4B2900A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A548561E7C4B2900A6C4A1 /* Debug */,
+				07A548571E7C4B2900A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
