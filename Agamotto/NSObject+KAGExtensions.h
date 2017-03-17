@@ -24,20 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDictionary<NSKeyValueChangeKey, id> *change);
 
-/**
- Protocol for objects returned by the below methods, which can be used to manually stop observation, but is not required. Observation is stopped automatically on deallocation.
- */
-@protocol KAGObserver <NSObject>
-@required
-/**
- Returns the set of key paths being observed.
- */
-@property (readonly,copy,nonatomic) NSSet<NSString *> *observingKeyPaths;
-/**
- Stops observation of the key paths returned by observingKeyPaths. The method is thread safe and can be called multiple times safely.
- */
-- (void)stopObserving;
-@end
+@protocol KAGObserver;
 
 @interface NSObject (KAGExtensions)
 
@@ -62,6 +49,21 @@ typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDiction
  */
 - (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block;
 
+@end
+
+/**
+ Protocol for objects returned by the below methods, which can be used to manually stop observation, but is not required. Observation is stopped automatically on deallocation.
+ */
+@protocol KAGObserver <NSObject>
+@required
+/**
+ Returns the set of key paths being observed.
+ */
+@property (readonly,copy,nonatomic) NSSet<NSString *> *observingKeyPaths;
+/**
+ Stops observation of the key paths returned by observingKeyPaths. The method is thread safe and can be called multiple times safely.
+ */
+- (void)stopObserving;
 @end
 
 NS_ASSUME_NONNULL_END
