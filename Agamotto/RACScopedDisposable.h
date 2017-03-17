@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 GitHub, Inc. All rights reserved.
 //
 
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 
 /// A disposable that calls its own -dispose when it is dealloc'd.
-@interface RACScopedDisposable : RACDisposable
+@interface RACScopedDisposable : KAGRACDisposable
 
 /// Creates a new scoped disposable that will also dispose of the given
 /// disposable when it is dealloc'd.
-+ (instancetype)scopedDisposableWithDisposable:(RACDisposable *)disposable;
++ (instancetype)scopedDisposableWithDisposable:(KAGRACDisposable *)disposable;
 
 @end

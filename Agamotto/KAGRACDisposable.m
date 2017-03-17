@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 GitHub, Inc. All rights reserved.
 //
 
-#import "RACDisposable.h"
+#import "KAGRACDisposable.h"
 #import "RACScopedDisposable.h"
 #import <stdatomic.h>
 
-@interface RACDisposable () {
+@interface KAGRACDisposable () {
 	// A copied block of type void (^)(void) containing the logic for disposal,
 	// a pointer to `self` if no logic should be performed upon disposal, or
 	// NULL if the receiver is already disposed.
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation RACDisposable
+@implementation KAGRACDisposable
 
 #pragma mark Properties
 

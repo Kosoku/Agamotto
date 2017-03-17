@@ -12,7 +12,7 @@
 
 /// A disposable encapsulates the work necessary to tear down and cleanup a
 /// subscription.
-@interface RACDisposable : NSObject
+@interface KAGRACDisposable : NSObject
 
 /// Whether the receiver has been disposed.
 ///
