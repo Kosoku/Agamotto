@@ -153,6 +153,14 @@
 			children = (
 				07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */,
 				07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */,
+				07A547D41E7C431F00A6C4A1 /* Private */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		07A547D41E7C431F00A6C4A1 /* Private */ = {
+			isa = PBXGroup;
+			children = (
 				07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */,
 				07DB3C8B1E7135AC0089F7F5 /* KAGRACDisposable.m */,
 				07DB3C8E1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h */,
@@ -176,7 +184,7 @@
 				07DB3CB21E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h */,
 				07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */,
 			);
-			name = Source;
+			path = Private;
 			sourceTree = "<group>";
 		};
 		07DB3CBB1E713B420089F7F5 /* AgamottoDemo-iOS */ = {
