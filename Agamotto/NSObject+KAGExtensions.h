@@ -42,25 +42,6 @@ typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDiction
 @interface NSObject (KAGExtensions)
 
 /**
- Returns `[self KAG_observeTarget:target forKeyPath:keyPath options:0 block:block]`.
- 
- @param target The target to observe
- @param keyPath The key path to observe
- @param block The block that will be invoked on each change
- @return An object that can be used to manually stop the observation
- */
-+ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block;
-/**
- Returns `[self KAG_observeTarget:target forKeyPath:keyPath options:options block:block]`.
- 
- @param target The target to observe
- @param keyPath The key path to observe
- @param options The KVO options to use
- @param block The block that will be invoked on each change
- @return An object that can be used to manually stop the observation
- */
-+ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block;
-/**
  Sets up KVO observation on the *target* for the provided *keyPaths* and returns an object that can be used to manually stop observation.
  
  @param target The target to observe
@@ -71,23 +52,6 @@ typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDiction
  */
 + (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block;
 
-/**
- Returns `[self KAG_addObserverForKeyPath:keyPath options:0 block:block]`.
- 
- @param keyPath The key path to observe
- @param block The block that will be invoked on each change
- @return An object that can be used to manually stop the observation
- */
-- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block;
-/**
- Returns `[self KAG_addObserverForKeyPaths:@[keyPath] options:0 block:block]`.
- 
- @param keyPath The key path to observe
- @param options The KVO options to use
- @param block The block that will be invoked on each change
- @return An object that can be used to manually stop the observation
- */
-- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block;
 /**
  Returns `[self.class KAG_observeTarget:self keyPaths:keyPaths options:options block:block]`.
  

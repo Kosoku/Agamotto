@@ -41,12 +41,6 @@ static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
 
 @implementation NSObject (KAGExtensions)
 
-+ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
-    return [self KAG_observeTarget:target forKeyPath:keyPath options:0 block:block];
-}
-+ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    return [self KAG_observeTarget:target forKeyPaths:@[keyPath] options:options block:block];
-}
 + (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
     NSMutableSet *uniqueKeyPaths = [[NSMutableSet alloc] init];
     
@@ -71,12 +65,6 @@ static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
     return retval;
 }
 
-- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath block:(KAGObserverBlock)block; {
-    return [self KAG_addObserverForKeyPath:keyPath options:0 block:block];
-}
-- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
-    return [self KAG_addObserverForKeyPaths:@[keyPath] options:options block:block];
-}
 - (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
     return [self.class KAG_observeTarget:self forKeyPaths:keyPaths options:options block:block];
 }
