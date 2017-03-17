@@ -72,6 +72,41 @@
 		07A548531E7C4B2900A6C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A548521E7C4B2900A6C4A1 /* Assets.xcassets */; };
 		07A548581E7C4B3400A6C4A1 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */; };
 		07A548591E7C4B3400A6C4A1 /* Agamotto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07A548711E7C4D6E00A6C4A1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A5486F1E7C4D6E00A6C4A1 /* Interface.storyboard */; };
+		07A548731E7C4D6E00A6C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A548721E7C4D6E00A6C4A1 /* Assets.xcassets */; };
+		07A5487A1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07A548791E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07A548821E7C4D6E00A6C4A1 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548811E7C4D6E00A6C4A1 /* InterfaceController.m */; };
+		07A548851E7C4D6E00A6C4A1 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548841E7C4D6E00A6C4A1 /* ExtensionDelegate.m */; };
+		07A548881E7C4D6E00A6C4A1 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548871E7C4D6E00A6C4A1 /* NotificationController.m */; };
+		07A5488A1E7C4D6E00A6C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A548891E7C4D6E00A6C4A1 /* Assets.xcassets */; };
+		07A5488E1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07A5486D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS.app */; };
+		07A548971E7C4D9400A6C4A1 /* Agamotto.h in Headers */ = {isa = PBXBuildFile; fileRef = 072628261E70E49800511F80 /* Agamotto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A548981E7C4D9400A6C4A1 /* NSObject+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A548991E7C4D9400A6C4A1 /* KAGRACDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5489A1E7C4D9400A6C4A1 /* NSObject+KAGRACDeallocating.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8E1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5489B1E7C4D9400A6C4A1 /* NSObject+KAGRACKVOWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C901E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5489C1E7C4D9400A6C4A1 /* KAGRACCompoundDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C921E7136500089F7F5 /* KAGRACCompoundDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5489D1E7C4D9400A6C4A1 /* KAGRACKVOTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C941E7136500089F7F5 /* KAGRACKVOTrampoline.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5489E1E7C4D9400A6C4A1 /* KAGRACScopedDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C961E7136500089F7F5 /* KAGRACScopedDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5489F1E7C4D9400A6C4A1 /* KAGRACSerialDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C981E7136500089F7F5 /* KAGRACSerialDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548A01E7C4D9400A6C4A1 /* KAGRACKVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CA61E7138270089F7F5 /* KAGRACKVOProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548A11E7C4D9400A6C4A1 /* KAGRACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAA1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548A21E7C4D9400A6C4A1 /* KAGRACEXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CAE1E7138850089F7F5 /* KAGRACEXTScope.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548A31E7C4D9400A6C4A1 /* KAGRACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB01E7138940089F7F5 /* KAGRACmetamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548A41E7C4D9400A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3CB21E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A548A51E7C4DA800A6C4A1 /* NSObject+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */; };
+		07A548A61E7C4DA800A6C4A1 /* KAGRACDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C8B1E7135AC0089F7F5 /* KAGRACDisposable.m */; };
+		07A548A71E7C4DA800A6C4A1 /* NSObject+KAGRACDeallocating.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C8F1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m */; };
+		07A548A81E7C4DA800A6C4A1 /* NSObject+KAGRACKVOWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C911E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m */; };
+		07A548A91E7C4DA800A6C4A1 /* KAGRACCompoundDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C931E7136500089F7F5 /* KAGRACCompoundDisposable.m */; };
+		07A548AA1E7C4DA800A6C4A1 /* KAGRACKVOTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C951E7136500089F7F5 /* KAGRACKVOTrampoline.m */; };
+		07A548AB1E7C4DA800A6C4A1 /* KAGRACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C971E7136500089F7F5 /* KAGRACScopedDisposable.m */; };
+		07A548AC1E7C4DA800A6C4A1 /* KAGRACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C991E7136500089F7F5 /* KAGRACSerialDisposable.m */; };
+		07A548AD1E7C4DA800A6C4A1 /* KAGRACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CA71E7138270089F7F5 /* KAGRACKVOProxy.m */; };
+		07A548AE1E7C4DA800A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CAB1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m */; };
+		07A548AF1E7C4DA800A6C4A1 /* NSString+KAGRACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3CB31E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m */; };
+		07A548B01E7C4EF200A6C4A1 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548621E7C4CF300A6C4A1 /* Agamotto.framework */; };
+		07A548B11E7C4EF200A6C4A1 /* Agamotto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548621E7C4CF300A6C4A1 /* Agamotto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07DB3C881E7133A20089F7F5 /* NSObject+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DB3C891E7133A20089F7F5 /* NSObject+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */; };
 		07DB3C8C1E7135AC0089F7F5 /* KAGRACDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -120,6 +155,27 @@
 			remoteGlobalIDString = 07A5481D1E7C4A6B00A6C4A1;
 			remoteInfo = "Agamotto-tvOS";
 		};
+		07A5487B1E7C4D6E00A6C4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072628181E70E40C00511F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A548781E7C4D6E00A6C4A1;
+			remoteInfo = "AgamottoDemo-watchOS Extension";
+		};
+		07A5488C1E7C4D6E00A6C4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072628181E70E40C00511F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A5486C1E7C4D6E00A6C4A1;
+			remoteInfo = "AgamottoDemo-watchOS";
+		};
+		07A548B21E7C4EF200A6C4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072628181E70E40C00511F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A548611E7C4CF300A6C4A1;
+			remoteInfo = "Agamotto-watchOS";
+		};
 		07DB3CD11E713B510089F7F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 072628181E70E40C00511F80 /* Project object */;
@@ -148,6 +204,39 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07A548591E7C4B3400A6C4A1 /* Agamotto.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548921E7C4D6E00A6C4A1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				07A5487A1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548961E7C4D6E00A6C4A1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				07A5488E1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548B41E7C4EF200A6C4A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07A548B11E7C4EF200A6C4A1 /* Agamotto.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +270,22 @@
 		07A548501E7C4B2900A6C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07A548521E7C4B2900A6C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07A548541E7C4B2900A6C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A548621E7C4CF300A6C4A1 /* Agamotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Agamotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A5486A1E7C4D2100A6C4A1 /* Agamotto-watchOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agamotto-watchOS-Info.plist"; sourceTree = "<group>"; };
+		07A5486D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgamottoDemo-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A548701E7C4D6E00A6C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		07A548721E7C4D6E00A6C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07A548741E7C4D6E00A6C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A548791E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AgamottoDemo-watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A5487F1E7C4D6E00A6C4A1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		07A548801E7C4D6E00A6C4A1 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		07A548811E7C4D6E00A6C4A1 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		07A548831E7C4D6E00A6C4A1 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		07A548841E7C4D6E00A6C4A1 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		07A548861E7C4D6E00A6C4A1 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		07A548871E7C4D6E00A6C4A1 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		07A548891E7C4D6E00A6C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07A5488B1E7C4D6E00A6C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KAGExtensions.h"; sourceTree = "<group>"; };
 		07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KAGExtensions.m"; sourceTree = "<group>"; };
 		07DB3C8A1E7135AC0089F7F5 /* KAGRACDisposable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGRACDisposable.h; sourceTree = "<group>"; };
@@ -255,6 +360,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A5485E1E7C4CF300A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548761E7C4D6E00A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548B01E7C4EF200A6C4A1 /* Agamotto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DB3CB71E713B420089F7F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +393,8 @@
 				07DB3CBB1E713B420089F7F5 /* AgamottoDemo-iOS */,
 				07A547E81E7C44A500A6C4A1 /* AgamottoDemo-macOS */,
 				07A548451E7C4B2900A6C4A1 /* AgamottoDemo-tvOS */,
+				07A5486E1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS */,
+				07A5487D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension */,
 				072628241E70E49800511F80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -286,6 +408,9 @@
 				07A547E71E7C44A400A6C4A1 /* AgamottoDemo-macOS.app */,
 				07A5481E1E7C4A6B00A6C4A1 /* Agamotto.framework */,
 				07A548441E7C4B2900A6C4A1 /* AgamottoDemo-tvOS.app */,
+				07A548621E7C4CF300A6C4A1 /* Agamotto.framework */,
+				07A5486D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS.app */,
+				07A548791E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,6 +431,7 @@
 				072628271E70E49800511F80 /* Agamotto-iOS-Info.plist */,
 				07A547E21E7C442E00A6C4A1 /* Agamotto-macOS-Info.plist */,
 				07A548261E7C4A9900A6C4A1 /* Agamotto-tvOS-Info.plist */,
+				07A5486A1E7C4D2100A6C4A1 /* Agamotto-watchOS-Info.plist */,
 				0726282D1E70E57300511F80 /* Agamotto-Info.h */,
 			);
 			name = "Supporting Files";
@@ -392,6 +518,40 @@
 			isa = PBXGroup;
 			children = (
 				07A548471E7C4B2900A6C4A1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07A5486E1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				07A5486F1E7C4D6E00A6C4A1 /* Interface.storyboard */,
+				07A548721E7C4D6E00A6C4A1 /* Assets.xcassets */,
+				07A548741E7C4D6E00A6C4A1 /* Info.plist */,
+			);
+			path = "AgamottoDemo-watchOS";
+			sourceTree = "<group>";
+		};
+		07A5487D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				07A548801E7C4D6E00A6C4A1 /* InterfaceController.h */,
+				07A548811E7C4D6E00A6C4A1 /* InterfaceController.m */,
+				07A548831E7C4D6E00A6C4A1 /* ExtensionDelegate.h */,
+				07A548841E7C4D6E00A6C4A1 /* ExtensionDelegate.m */,
+				07A548861E7C4D6E00A6C4A1 /* NotificationController.h */,
+				07A548871E7C4D6E00A6C4A1 /* NotificationController.m */,
+				07A548891E7C4D6E00A6C4A1 /* Assets.xcassets */,
+				07A5488B1E7C4D6E00A6C4A1 /* Info.plist */,
+				07A5487E1E7C4D6E00A6C4A1 /* Supporting Files */,
+			);
+			path = "AgamottoDemo-watchOS Extension";
+			sourceTree = "<group>";
+		};
+		07A5487E1E7C4D6E00A6C4A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A5487F1E7C4D6E00A6C4A1 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -483,6 +643,27 @@
 				07A548341E7C4AF900A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
 				07A548331E7C4AF900A6C4A1 /* KAGRACmetamacros.h in Headers */,
 				07A548301E7C4AF900A6C4A1 /* KAGRACKVOProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5485F1E7C4CF300A6C4A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548991E7C4D9400A6C4A1 /* KAGRACDisposable.h in Headers */,
+				07A548981E7C4D9400A6C4A1 /* NSObject+KAGExtensions.h in Headers */,
+				07A548A21E7C4D9400A6C4A1 /* KAGRACEXTScope.h in Headers */,
+				07A5489F1E7C4D9400A6C4A1 /* KAGRACSerialDisposable.h in Headers */,
+				07A548A11E7C4D9400A6C4A1 /* KAGRACEXTRuntimeExtensions.h in Headers */,
+				07A5489C1E7C4D9400A6C4A1 /* KAGRACCompoundDisposable.h in Headers */,
+				07A5489E1E7C4D9400A6C4A1 /* KAGRACScopedDisposable.h in Headers */,
+				07A5489A1E7C4D9400A6C4A1 /* NSObject+KAGRACDeallocating.h in Headers */,
+				07A5489B1E7C4D9400A6C4A1 /* NSObject+KAGRACKVOWrapper.h in Headers */,
+				07A5489D1E7C4D9400A6C4A1 /* KAGRACKVOTrampoline.h in Headers */,
+				07A548971E7C4D9400A6C4A1 /* Agamotto.h in Headers */,
+				07A548A41E7C4D9400A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
+				07A548A31E7C4D9400A6C4A1 /* KAGRACmetamacros.h in Headers */,
+				07A548A01E7C4D9400A6C4A1 /* KAGRACKVOProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +762,60 @@
 			productReference = 07A548441E7C4B2900A6C4A1 /* AgamottoDemo-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		07A548611E7C4CF300A6C4A1 /* Agamotto-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A548671E7C4CF300A6C4A1 /* Build configuration list for PBXNativeTarget "Agamotto-watchOS" */;
+			buildPhases = (
+				07A5485D1E7C4CF300A6C4A1 /* Sources */,
+				07A5485E1E7C4CF300A6C4A1 /* Frameworks */,
+				07A5485F1E7C4CF300A6C4A1 /* Headers */,
+				07A548601E7C4CF300A6C4A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Agamotto-watchOS";
+			productName = "Agamotto-watchOS";
+			productReference = 07A548621E7C4CF300A6C4A1 /* Agamotto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07A5486C1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A548931E7C4D6E00A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-watchOS" */;
+			buildPhases = (
+				07A5486B1E7C4D6E00A6C4A1 /* Resources */,
+				07A548921E7C4D6E00A6C4A1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A5487C1E7C4D6E00A6C4A1 /* PBXTargetDependency */,
+			);
+			name = "AgamottoDemo-watchOS";
+			productName = "AgamottoDemo-watchOS";
+			productReference = 07A5486D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		07A548781E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A5488F1E7C4D6E00A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-watchOS Extension" */;
+			buildPhases = (
+				07A548751E7C4D6E00A6C4A1 /* Sources */,
+				07A548761E7C4D6E00A6C4A1 /* Frameworks */,
+				07A548771E7C4D6E00A6C4A1 /* Resources */,
+				07A548B41E7C4EF200A6C4A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A548B31E7C4EF200A6C4A1 /* PBXTargetDependency */,
+			);
+			name = "AgamottoDemo-watchOS Extension";
+			productName = "AgamottoDemo-watchOS Extension";
+			productReference = 07A548791E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		07DB3CB91E713B420089F7F5 /* AgamottoDemo-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07DB3CCE1E713B420089F7F5 /* Build configuration list for PBXNativeTarget "AgamottoDemo-iOS" */;
@@ -588,11 +823,13 @@
 				07DB3CB61E713B420089F7F5 /* Sources */,
 				07DB3CB71E713B420089F7F5 /* Frameworks */,
 				07DB3CB81E713B420089F7F5 /* Resources */,
+				07A548961E7C4D6E00A6C4A1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				07DB3CD21E713B510089F7F5 /* PBXTargetDependency */,
+				07A5488D1E7C4D6E00A6C4A1 /* PBXTargetDependency */,
 			);
 			name = "AgamottoDemo-iOS";
 			productName = "AgamottoDemo-iOS";
@@ -629,6 +866,18 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					07A548611E7C4CF300A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					07A5486C1E7C4D6E00A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					07A548781E7C4D6E00A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					07DB3CB91E713B420089F7F5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -651,9 +900,12 @@
 				072628221E70E49800511F80 /* Agamotto-iOS */,
 				07A547D91E7C43FA00A6C4A1 /* Agamotto-macOS */,
 				07A5481D1E7C4A6B00A6C4A1 /* Agamotto-tvOS */,
+				07A548611E7C4CF300A6C4A1 /* Agamotto-watchOS */,
 				07DB3CB91E713B420089F7F5 /* AgamottoDemo-iOS */,
 				07A547E61E7C44A400A6C4A1 /* AgamottoDemo-macOS */,
 				07A548431E7C4B2900A6C4A1 /* AgamottoDemo-tvOS */,
+				07A5486C1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS */,
+				07A548781E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -695,6 +947,30 @@
 			files = (
 				07A548531E7C4B2900A6C4A1 /* Assets.xcassets in Resources */,
 				07A548511E7C4B2900A6C4A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548601E7C4CF300A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5486B1E7C4D6E00A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548731E7C4D6E00A6C4A1 /* Assets.xcassets in Resources */,
+				07A548711E7C4D6E00A6C4A1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548771E7C4D6E00A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A5488A1E7C4D6E00A6C4A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +1061,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A5485D1E7C4CF300A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548AA1E7C4DA800A6C4A1 /* KAGRACKVOTrampoline.m in Sources */,
+				07A548A61E7C4DA800A6C4A1 /* KAGRACDisposable.m in Sources */,
+				07A548AD1E7C4DA800A6C4A1 /* KAGRACKVOProxy.m in Sources */,
+				07A548AC1E7C4DA800A6C4A1 /* KAGRACSerialDisposable.m in Sources */,
+				07A548A51E7C4DA800A6C4A1 /* NSObject+KAGExtensions.m in Sources */,
+				07A548AB1E7C4DA800A6C4A1 /* KAGRACScopedDisposable.m in Sources */,
+				07A548A71E7C4DA800A6C4A1 /* NSObject+KAGRACDeallocating.m in Sources */,
+				07A548AE1E7C4DA800A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */,
+				07A548A81E7C4DA800A6C4A1 /* NSObject+KAGRACKVOWrapper.m in Sources */,
+				07A548AF1E7C4DA800A6C4A1 /* NSString+KAGRACKeyPathUtilities.m in Sources */,
+				07A548A91E7C4DA800A6C4A1 /* KAGRACCompoundDisposable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A548751E7C4D6E00A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A548851E7C4D6E00A6C4A1 /* ExtensionDelegate.m in Sources */,
+				07A548821E7C4D6E00A6C4A1 /* InterfaceController.m in Sources */,
+				07A548881E7C4D6E00A6C4A1 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DB3CB61E713B420089F7F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -808,6 +1112,21 @@
 			target = 07A5481D1E7C4A6B00A6C4A1 /* Agamotto-tvOS */;
 			targetProxy = 07A5485A1E7C4B3400A6C4A1 /* PBXContainerItemProxy */;
 		};
+		07A5487C1E7C4D6E00A6C4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A548781E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension */;
+			targetProxy = 07A5487B1E7C4D6E00A6C4A1 /* PBXContainerItemProxy */;
+		};
+		07A5488D1E7C4D6E00A6C4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A5486C1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS */;
+			targetProxy = 07A5488C1E7C4D6E00A6C4A1 /* PBXContainerItemProxy */;
+		};
+		07A548B31E7C4EF200A6C4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A548611E7C4CF300A6C4A1 /* Agamotto-watchOS */;
+			targetProxy = 07A548B21E7C4EF200A6C4A1 /* PBXContainerItemProxy */;
+		};
 		07DB3CD21E713B510089F7F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 072628221E70E49800511F80 /* Agamotto-iOS */;
@@ -830,6 +1149,14 @@
 				07A548501E7C4B2900A6C4A1 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07A5486F1E7C4D6E00A6C4A1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A548701E7C4D6E00A6C4A1 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		07DB3CC51E713B420089F7F5 /* Main.storyboard */ = {
@@ -1427,6 +1754,328 @@
 			};
 			name = Release;
 		};
+		07A548681E7C4CF300A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Agamotto/Agamotto-watchOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Agamotto/Agamotto-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.agamotto;
+				PRODUCT_NAME = Agamotto;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		07A548691E7C4CF300A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Agamotto/Agamotto-watchOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Agamotto/Agamotto-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.agamotto;
+				PRODUCT_NAME = Agamotto;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		07A548901E7C4D6E00A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AgamottoDemo-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		07A548911E7C4D6E00A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AgamottoDemo-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		07A548941E7C4D6E00A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = AgamottoDemo_watchOS_Extension;
+				INFOPLIST_FILE = "AgamottoDemo-watchOS/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		07A548951E7C4D6E00A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = AgamottoDemo_watchOS_Extension;
+				INFOPLIST_FILE = "AgamottoDemo-watchOS/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.AgamottoDemo-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		07DB3CCF1E713B420089F7F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1577,6 +2226,30 @@
 			buildConfigurations = (
 				07A548561E7C4B2900A6C4A1 /* Debug */,
 				07A548571E7C4B2900A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A548671E7C4CF300A6C4A1 /* Build configuration list for PBXNativeTarget "Agamotto-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A548681E7C4CF300A6C4A1 /* Debug */,
+				07A548691E7C4CF300A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A5488F1E7C4D6E00A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A548901E7C4D6E00A6C4A1 /* Debug */,
+				07A548911E7C4D6E00A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A548931E7C4D6E00A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A548941E7C4D6E00A6C4A1 /* Debug */,
+				07A548951E7C4D6E00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

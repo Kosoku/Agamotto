@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Agamotto-watchOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Agamotto.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,16 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>5</integer>
+		</dict>
+		<key>AgamottoDemo-watchOS (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>AgamottoDemo-watchOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -58,6 +73,16 @@
 			<true/>
 		</dict>
 		<key>07A548431E7C4B2900A6C4A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07A548611E7C4CF300A6C4A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07A5486C1E7C4D6E00A6C4A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
