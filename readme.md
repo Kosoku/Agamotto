@@ -13,6 +13,10 @@ You can install *Agamotto* using [cocoapods](https://cocoapods.org/), [Carthage]
 
 ### Usage
 
+You **must** do the `weakSelf`/`strongSelf` dance for any blocks passed to the observing methods. Otherwise a retain cycle will be introduced.
+
+It is not required in the notification observing example because `self` is not called within the block.
+
 ```objc
 #import <Agamotto/Agamotto.h>
 
