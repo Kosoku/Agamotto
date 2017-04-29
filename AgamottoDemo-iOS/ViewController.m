@@ -65,6 +65,10 @@
     self.observer = [self KAG_addObserverForKeyPaths:@[@"model.text",@"model.submodel.subtext"] options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
         NSLog(@"keyPath: %@ value: %@",keyPath,value);
     }];
+    
+    [self KAG_addObserverForNotificationName:UIDeviceOrientationDidChangeNotification object:nil block:^(NSNotification * _Nonnull notification) {
+        NSLog(@"orientation %@",@(UIDevice.currentDevice.orientation));
+    }];
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

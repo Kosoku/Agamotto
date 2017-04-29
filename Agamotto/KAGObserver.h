@@ -1,9 +1,9 @@
 //
-//  Agamotto.h
+//  KAGObserver.h
 //  Agamotto
 //
-//  Created by William Towe on 3/8/17.
-//  Copyright (c) 2017 Kosoku Interactive, LLC. All rights reserved.
+//  Created by William Towe on 4/29/17.
+//  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 //
@@ -13,13 +13,25 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Agamotto.
-FOUNDATION_EXPORT double AgamottoVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Agamotto.
-FOUNDATION_EXPORT const unsigned char AgamottoVersionString[];
+/**
+ Protocol for objects returned by the below methods, which can be used to manually stop observation, but is not required. Observation is stopped automatically on deallocation.
+ */
+@protocol KAGObserver <NSObject>
+@required
+/**
+ Returns the set of key paths being observed.
+ */
+@property (readonly,copy,nonatomic,nullable) NSSet<NSString *> *observingKeyPaths;
+/**
+ Returns the notification name being observed.
+ */
+@property (readonly,copy,nonatomic,nullable) NSNotificationName observingNotificationName;
+/**
+ Stops observation of the key paths returned by observingKeyPaths. The method is thread safe and can be called multiple times safely.
+ */
+- (void)stopObserving;
+@end
 
-// In this header, you should import all the public headers of your framework using statements like #import <Agamotto/PublicHeader.h>
-
-#import <Agamotto/KAGObserver.h>
-#import <Agamotto/NSObject+KAGExtensions.h>
+NS_ASSUME_NONNULL_END

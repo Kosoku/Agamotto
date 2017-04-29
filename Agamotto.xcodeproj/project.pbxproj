@@ -138,6 +138,10 @@
 		07DB3CC91E713B420089F7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CC81E713B420089F7F5 /* Assets.xcassets */; };
 		07DB3CCC1E713B420089F7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CCA1E713B420089F7F5 /* LaunchScreen.storyboard */; };
 		07DB3CD31E713B550089F7F5 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072628231E70E49800511F80 /* Agamotto.framework */; };
+		07ED26B01EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07ED26B11EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07ED26B21EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07ED26B31EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,6 +324,7 @@
 		07DB3CC81E713B420089F7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07DB3CCB1E713B420089F7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07DB3CCD1E713B420089F7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07ED26AF1EB5144C007F5CBE /* KAGObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGObserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +445,7 @@
 		0726282E1E70E66200511F80 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				07ED26AF1EB5144C007F5CBE /* KAGObserver.h */,
 				07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */,
 				07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */,
 				07A547D41E7C431F00A6C4A1 /* Private */,
@@ -601,6 +607,7 @@
 				072628281E70E49800511F80 /* Agamotto.h in Headers */,
 				07DB3CA41E7136500089F7F5 /* KAGRACSerialDisposable.h in Headers */,
 				07DB3CB11E7138940089F7F5 /* KAGRACmetamacros.h in Headers */,
+				07ED26B01EB5144C007F5CBE /* KAGObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +629,7 @@
 				07A5480D1E7C455400A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
 				07A5480C1E7C455400A6C4A1 /* KAGRACmetamacros.h in Headers */,
 				07A548091E7C455400A6C4A1 /* KAGRACKVOProxy.h in Headers */,
+				07ED26B11EB5144C007F5CBE /* KAGObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +651,7 @@
 				07A548341E7C4AF900A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
 				07A548331E7C4AF900A6C4A1 /* KAGRACmetamacros.h in Headers */,
 				07A548301E7C4AF900A6C4A1 /* KAGRACKVOProxy.h in Headers */,
+				07ED26B21EB5144C007F5CBE /* KAGObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +673,7 @@
 				07A548A41E7C4D9400A6C4A1 /* NSString+KAGRACKeyPathUtilities.h in Headers */,
 				07A548A31E7C4D9400A6C4A1 /* KAGRACmetamacros.h in Headers */,
 				07A548A01E7C4D9400A6C4A1 /* KAGRACKVOProxy.h in Headers */,
+				07ED26B31EB5144C007F5CBE /* KAGObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2204,6 +2214,7 @@
 				07A547E01E7C43FA00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A547F81E7C44A500A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-macOS" */ = {
 			isa = XCConfigurationList;
@@ -2212,6 +2223,7 @@
 				07A547FA1E7C44A500A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A548231E7C4A6B00A6C4A1 /* Build configuration list for PBXNativeTarget "Agamotto-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -2220,6 +2232,7 @@
 				07A548251E7C4A6B00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A548551E7C4B2900A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -2228,6 +2241,7 @@
 				07A548571E7C4B2900A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A548671E7C4CF300A6C4A1 /* Build configuration list for PBXNativeTarget "Agamotto-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -2236,6 +2250,7 @@
 				07A548691E7C4CF300A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A5488F1E7C4D6E00A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-watchOS Extension" */ = {
 			isa = XCConfigurationList;
@@ -2244,6 +2259,7 @@
 				07A548911E7C4D6E00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A548931E7C4D6E00A6C4A1 /* Build configuration list for PBXNativeTarget "AgamottoDemo-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -2252,6 +2268,7 @@
 				07A548951E7C4D6E00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DB3CCE1E713B420089F7F5 /* Build configuration list for PBXNativeTarget "AgamottoDemo-iOS" */ = {
 			isa = XCConfigurationList;

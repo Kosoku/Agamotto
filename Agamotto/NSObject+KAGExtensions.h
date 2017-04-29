@@ -12,6 +12,7 @@
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import <Agamotto/KAGObserver.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,9 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param value The new value, can be nil
  @param change The KVO change dictionary
  */
-typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDictionary<NSKeyValueChangeKey, id> *change);
-
-@protocol KAGObserver;
+typedef void(^KAGKVOObserverBlock)(NSString *keyPath, id _Nullable value, NSDictionary<NSKeyValueChangeKey, id> *change);
+/**
+ Typedef for a block that is invoked on each notification change, passing the notification object.
+ 
+ @param notification The notification object
+ */
+typedef void(^KAGNotificationObserverBlock)(NSNotification *notification);
 
 @interface NSObject (KAGExtensions)
 
@@ -37,8 +42,17 @@ typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDiction
  @param block The block that will be invoked on each change
  @return An object that can be used to manually stop the observation
  */
-+ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block;
++ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block;
 
+/**
+ Returns `[self KAG_addObserverForKeyPaths:@[keyPath] options:options block:block]`.
+ 
+ @param keyPath The key path to observe
+ @param options The KVO options to use
+ @param block The block that will be invoked on each change
+ @return An object that can be used to manually stop the observation
+ */
+- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block;
 /**
  Returns `[self.class KAG_observeTarget:self keyPaths:keyPaths options:options block:block]`.
  
@@ -47,23 +61,28 @@ typedef void(^KAGObserverBlock)(NSString *keyPath, id _Nullable value, NSDiction
  @param block The block that will be invoked on each change
  @return An object that can be used to manually stop the observation
  */
-- (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block;
-
-@end
+- (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block;
 
 /**
- Protocol for objects returned by the below methods, which can be used to manually stop observation, but is not required. Observation is stopped automatically on deallocation.
+ Returns `[self KAG_addObserverToNotificationCenter:nil notificationName:notificationName object:object block:block]`.
+ 
+ @param notificationName The notification name to filter notifications for
+ @param object The object to filter notifications for
+ @param block The block to invoke when a matching notification is received
+ @return An object that can be used to manually stop the observation
  */
-@protocol KAGObserver <NSObject>
-@required
+- (id<KAGObserver>)KAG_addObserverForNotificationName:(nullable NSNotificationName)notificationName object:(nullable id)object block:(KAGNotificationObserverBlock)block;
 /**
- Returns the set of key paths being observed.
+ Sets up notification observing on *notificationCenter* for the provided *notificationName* and *object*, invoking *block* when a matching notification is received. Returns an object that can be used to manually stop the observation, otherwise the observation ends when the receiver is deallocated. If nil is passed for *notificationCenter*, [NSNotificationCenter defaultCenter] is used.
+ 
+ @param notificationCenter The notification center to subscribe to
+ @param notificationName The notification name to filter notifications for
+ @param object The object to filter notifications for
+ @param block The block to invoke when a matching notification is received
+ @return An object that can be used to manually stop the observation
  */
-@property (readonly,copy,nonatomic) NSSet<NSString *> *observingKeyPaths;
-/**
- Stops observation of the key paths returned by observingKeyPaths. The method is thread safe and can be called multiple times safely.
- */
-- (void)stopObserving;
+- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(nullable NSNotificationCenter *)notificationCenter notificationName:(nullable NSNotificationName)notificationName object:(nullable id)object block:(KAGNotificationObserverBlock)block;
+
 @end
 
 NS_ASSUME_NONNULL_END

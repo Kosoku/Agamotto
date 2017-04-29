@@ -17,8 +17,63 @@
 
 #import <objc/runtime.h>
 
+@interface KAGNotificationWrapper : NSObject
+@property (weak,nonatomic) id target;
+@property (copy,nonatomic) KAGNotificationObserverBlock block;
+
+- (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block;
+
+- (void)stopObserving;
+@end
+
+@implementation KAGNotificationWrapper
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
+    if (!(self = [super init]))
+        return nil;
+    
+    _block = [block copy];
+    
+    [notificationCenter addObserver:self selector:@selector(_observeNotification:) name:notificationName object:object];
+    
+    return self;
+}
+
+- (void)stopObserving; {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)_observeNotification:(NSNotification *)note {
+    self.block(note);
+}
+        
+@end
+
+@interface NSObject (KAGPrivateExtensions)
+@property (readonly,nonatomic) NSMutableSet *_KAG_notificationWrappers;
+@end
+
+@implementation NSObject (KAGPrivateExtensions)
+
+- (NSMutableSet *)_KAG_notificationWrappers {
+    NSMutableSet *retval = objc_getAssociatedObject(self, _cmd);
+    if (retval == nil) {
+        retval = [[NSMutableSet alloc] init];
+        
+        objc_setAssociatedObject(self, _cmd, retval, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return retval;
+}
+
+@end
+
 @interface KAGRACDisposable (KAGExtensionsPrivate) <KAGObserver>
 @property (readwrite,copy,nonatomic) NSSet<NSString *> *observingKeyPaths;
+@property (readwrite,copy,nonatomic) NSNotificationName observingNotificationName;
 @end
 
 @implementation KAGRACDisposable (KAGExtensionsPrivate)
@@ -33,6 +88,16 @@ static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
     objc_setAssociatedObject(self, kKAG_ObservingKeyPathsKey, observingKeyPaths, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+static void *kKAG_ObservingNotificationNameKey = &kKAG_ObservingNotificationNameKey;
+
+@dynamic observingNotificationName;
+- (NSNotificationName)observingNotificationName {
+    return objc_getAssociatedObject(self, kKAG_ObservingNotificationNameKey);
+}
+- (void)setObservingNotificationName:(NSNotificationName)observingNotificationName {
+    objc_setAssociatedObject(self, kKAG_ObservingNotificationNameKey, observingNotificationName, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (void)stopObserving {
     [self dispose];
 }
@@ -41,7 +106,7 @@ static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
 
 @implementation NSObject (KAGExtensions)
 
-+ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
++ (id<KAGObserver>)KAG_observeTarget:(NSObject *)target forKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block; {
     NSMutableSet *uniqueKeyPaths = [[NSMutableSet alloc] init];
     
     for (NSString *keyPath in keyPaths) {
@@ -65,8 +130,40 @@ static void *kKAG_ObservingKeyPathsKey = &kKAG_ObservingKeyPathsKey;
     return retval;
 }
 
-- (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGObserverBlock)block; {
+- (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block {
+    return [self KAG_addObserverForKeyPaths:@[keyPath] options:options block:block];
+}
+- (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block; {
     return [self.class KAG_observeTarget:self forKeyPaths:keyPaths options:options block:block];
+}
+
+- (id<KAGObserver>)KAG_addObserverForNotificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
+    return [self KAG_addObserverToNotificationCenter:nil notificationName:notificationName object:object block:block];
+}
+- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
+    if (notificationCenter == nil) {
+        notificationCenter = [NSNotificationCenter defaultCenter];
+    }
+    
+    KAGNotificationWrapper *wrapper = [[KAGNotificationWrapper alloc] initWithNotificationCenter:notificationCenter notificationName:notificationName object:object block:block];
+    
+    NSMutableSet *wrappers = self._KAG_notificationWrappers;
+    
+    @synchronized(wrappers) {
+        [wrappers addObject:wrapper];
+    }
+    
+    KAGRACDisposable *retval = [KAGRACDisposable disposableWithBlock:^{
+        [wrapper stopObserving];
+        
+        @synchronized(wrappers) {
+            [wrappers removeObject:wrapper];
+        }
+    }];
+    
+    [retval setObservingNotificationName:notificationName];
+    
+    return retval;
 }
 
 @end
