@@ -68,7 +68,6 @@
             completion();
         });
     }]];
-    [self.action setEnabled:YES];
     
     [self.textField addTarget:self action:@selector(_textFieldAction:) forControlEvents:UIControlEventEditingChanged];
     
@@ -91,6 +90,7 @@
 }
 
 - (IBAction)_textFieldAction:(id)sender {
+    [self.action setEnabled:self.textField.text.length > 0];
     [self.model setText:self.textField.text];
 }
 
