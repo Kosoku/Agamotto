@@ -23,3 +23,10 @@ FOUNDATION_EXPORT const unsigned char AgamottoVersionString[];
 
 #import <Agamotto/KAGObserver.h>
 #import <Agamotto/NSObject+KAGExtensions.h>
+#if (TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_OSX)
+#import <Agamotto/KAGAction.h>
+#endif
+#if (TARGET_OS_IOS || TARGET_OS_TV)
+#import <Agamotto/UIBarButtonItem+KAGExtensions.h>
+#import <Agamotto/UIButton+KAGExtensions.h>
+#endif

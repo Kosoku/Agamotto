@@ -50,6 +50,7 @@
 
 @property (strong,nonatomic) Model *model;
 @property (strong,nonatomic) id<KAGObserver> observer;
+@property (strong,nonatomic) KAGAction *action;
 @end
 
 @implementation ViewController
@@ -59,8 +60,17 @@
     
     [self setModel:[[Model alloc] init]];
     
+    __weak __typeof__(self) weakSelf = self;
+    [self setAction:[[KAGAction alloc] initWithAsynchronousBlock:^(dispatch_block_t  _Nonnull completion) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.model setSubmodel:[[SubModel alloc] init]];
+            
+            completion();
+        });
+    }]];
+    [self.action setEnabled:YES];
+    
     [self.textField addTarget:self action:@selector(_textFieldAction:) forControlEvents:UIControlEventEditingChanged];
-    [self.button addTarget:self action:@selector(_buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     self.observer = [self KAG_addObserverForKeyPaths:@[@"model.text",@"model.submodel.subtext"] options:NSKeyValueObservingOptionInitial block:^(NSString *keyPath, id value, NSDictionary<NSKeyValueChangeKey,id> *change) {
         NSLog(@"keyPath: %@ value: %@",keyPath,value);
@@ -69,6 +79,8 @@
     [self KAG_addObserverForNotificationName:UIDeviceOrientationDidChangeNotification object:nil block:^(NSNotification * _Nonnull notification) {
         NSLog(@"orientation %@",@(UIDevice.currentDevice.orientation));
     }];
+    
+    [self.button setKAG_action:self.action];
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -80,9 +92,6 @@
 
 - (IBAction)_textFieldAction:(id)sender {
     [self.model setText:self.textField.text];
-}
-- (IBAction)_buttonAction:(id)sender {
-    [self.model setSubmodel:[[SubModel alloc] init]];
 }
 
 @end

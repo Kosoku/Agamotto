@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		072628281E70E49800511F80 /* Agamotto.h in Headers */ = {isa = PBXBuildFile; fileRef = 072628261E70E49800511F80 /* Agamotto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15001EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15011EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15021EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */; };
+		077B15031EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */; };
+		077B15061EBCAFA6007454FD /* KAGAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B15041EBCAFA6007454FD /* KAGAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15071EBCAFA6007454FD /* KAGAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B15041EBCAFA6007454FD /* KAGAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15081EBCAFA6007454FD /* KAGAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B15041EBCAFA6007454FD /* KAGAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15091EBCAFA6007454FD /* KAGAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B15051EBCAFA6007454FD /* KAGAction.m */; };
+		077B150A1EBCAFA6007454FD /* KAGAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B15051EBCAFA6007454FD /* KAGAction.m */; };
+		077B150B1EBCAFA6007454FD /* KAGAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B15051EBCAFA6007454FD /* KAGAction.m */; };
+		077B150E1EBCB7DF007454FD /* UIButton+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B150F1EBCB7DF007454FD /* UIButton+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B15101EBCB7DF007454FD /* UIButton+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */; };
+		077B15111EBCB7DF007454FD /* UIButton+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */; };
 		07A547EB1E7C44A500A6C4A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A547EA1E7C44A500A6C4A1 /* AppDelegate.m */; };
 		07A547EE1E7C44A500A6C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A547ED1E7C44A500A6C4A1 /* main.m */; };
 		07A547F11E7C44A500A6C4A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A547F01E7C44A500A6C4A1 /* ViewController.m */; };
@@ -252,6 +266,12 @@
 		072628261E70E49800511F80 /* Agamotto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agamotto.h; sourceTree = "<group>"; };
 		072628271E70E49800511F80 /* Agamotto-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agamotto-iOS-Info.plist"; sourceTree = "<group>"; };
 		0726282D1E70E57300511F80 /* Agamotto-Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Agamotto-Info.h"; sourceTree = "<group>"; };
+		077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+KAGExtensions.h"; path = "iOS/UIBarButtonItem+KAGExtensions.h"; sourceTree = "<group>"; };
+		077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+KAGExtensions.m"; path = "iOS/UIBarButtonItem+KAGExtensions.m"; sourceTree = "<group>"; };
+		077B15041EBCAFA6007454FD /* KAGAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGAction.h; sourceTree = "<group>"; };
+		077B15051EBCAFA6007454FD /* KAGAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGAction.m; sourceTree = "<group>"; };
+		077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+KAGExtensions.h"; path = "iOS/UIButton+KAGExtensions.h"; sourceTree = "<group>"; };
+		077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KAGExtensions.m"; path = "iOS/UIButton+KAGExtensions.m"; sourceTree = "<group>"; };
 		07A547DA1E7C43FA00A6C4A1 /* Agamotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Agamotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A547E21E7C442E00A6C4A1 /* Agamotto-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agamotto-macOS-Info.plist"; sourceTree = "<group>"; };
 		07A547E71E7C44A400A6C4A1 /* AgamottoDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgamottoDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -448,6 +468,12 @@
 				07ED26AF1EB5144C007F5CBE /* KAGObserver.h */,
 				07DB3C861E7133A20089F7F5 /* NSObject+KAGExtensions.h */,
 				07DB3C871E7133A20089F7F5 /* NSObject+KAGExtensions.m */,
+				077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */,
+				077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */,
+				077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */,
+				077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */,
+				077B15041EBCAFA6007454FD /* KAGAction.h */,
+				077B15051EBCAFA6007454FD /* KAGAction.m */,
 				07A547D41E7C431F00A6C4A1 /* Private */,
 			);
 			name = Source;
@@ -594,6 +620,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07DB3CAF1E7138850089F7F5 /* KAGRACEXTScope.h in Headers */,
+				077B15061EBCAFA6007454FD /* KAGAction.h in Headers */,
+				077B150E1EBCB7DF007454FD /* UIButton+KAGExtensions.h in Headers */,
+				077B15001EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h in Headers */,
 				07DB3C9E1E7136500089F7F5 /* KAGRACCompoundDisposable.h in Headers */,
 				07DB3C9C1E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.h in Headers */,
 				07DB3C9A1E7136500089F7F5 /* NSObject+KAGRACDeallocating.h in Headers */,
@@ -617,6 +646,7 @@
 			files = (
 				07A548021E7C455400A6C4A1 /* KAGRACDisposable.h in Headers */,
 				07A548011E7C455400A6C4A1 /* NSObject+KAGExtensions.h in Headers */,
+				077B15071EBCAFA6007454FD /* KAGAction.h in Headers */,
 				07A5480B1E7C455400A6C4A1 /* KAGRACEXTScope.h in Headers */,
 				07A548081E7C455400A6C4A1 /* KAGRACSerialDisposable.h in Headers */,
 				07A5480A1E7C455400A6C4A1 /* KAGRACEXTRuntimeExtensions.h in Headers */,
@@ -638,6 +668,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A548291E7C4AF900A6C4A1 /* KAGRACDisposable.h in Headers */,
+				077B15081EBCAFA6007454FD /* KAGAction.h in Headers */,
+				077B150F1EBCB7DF007454FD /* UIButton+KAGExtensions.h in Headers */,
+				077B15011EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h in Headers */,
 				07A548281E7C4AF900A6C4A1 /* NSObject+KAGExtensions.h in Headers */,
 				07A548321E7C4AF900A6C4A1 /* KAGRACEXTScope.h in Headers */,
 				07A5482F1E7C4AF900A6C4A1 /* KAGRACSerialDisposable.h in Headers */,
@@ -1003,10 +1036,13 @@
 			files = (
 				07DB3C9F1E7136500089F7F5 /* KAGRACCompoundDisposable.m in Sources */,
 				07DB3CAD1E7138540089F7F5 /* KAGRACEXTRuntimeExtensions.m in Sources */,
+				077B15091EBCAFA6007454FD /* KAGAction.m in Sources */,
+				077B15101EBCB7DF007454FD /* UIButton+KAGExtensions.m in Sources */,
 				07DB3C9B1E7136500089F7F5 /* NSObject+KAGRACDeallocating.m in Sources */,
 				07DB3CB51E7138AC0089F7F5 /* NSString+KAGRACKeyPathUtilities.m in Sources */,
 				07DB3CA31E7136500089F7F5 /* KAGRACScopedDisposable.m in Sources */,
 				07DB3CA91E7138270089F7F5 /* KAGRACKVOProxy.m in Sources */,
+				077B15021EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m in Sources */,
 				07DB3CA11E7136500089F7F5 /* KAGRACKVOTrampoline.m in Sources */,
 				07DB3CA51E7136500089F7F5 /* KAGRACSerialDisposable.m in Sources */,
 				07DB3C9D1E7136500089F7F5 /* NSObject+KAGRACKVOWrapper.m in Sources */,
@@ -1026,6 +1062,7 @@
 				07A5480E1E7C456F00A6C4A1 /* NSObject+KAGExtensions.m in Sources */,
 				07A548141E7C456F00A6C4A1 /* KAGRACScopedDisposable.m in Sources */,
 				07A548101E7C456F00A6C4A1 /* NSObject+KAGRACDeallocating.m in Sources */,
+				077B150A1EBCAFA6007454FD /* KAGAction.m in Sources */,
 				07A548171E7C456F00A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */,
 				07A548111E7C456F00A6C4A1 /* NSObject+KAGRACKVOWrapper.m in Sources */,
 				07A548181E7C456F00A6C4A1 /* NSString+KAGRACKeyPathUtilities.m in Sources */,
@@ -1049,10 +1086,13 @@
 			files = (
 				07A5483A1E7C4B1100A6C4A1 /* KAGRACKVOTrampoline.m in Sources */,
 				07A548361E7C4B1100A6C4A1 /* KAGRACDisposable.m in Sources */,
+				077B150B1EBCAFA6007454FD /* KAGAction.m in Sources */,
+				077B15111EBCB7DF007454FD /* UIButton+KAGExtensions.m in Sources */,
 				07A5483D1E7C4B1100A6C4A1 /* KAGRACKVOProxy.m in Sources */,
 				07A5483C1E7C4B1100A6C4A1 /* KAGRACSerialDisposable.m in Sources */,
 				07A548351E7C4B1100A6C4A1 /* NSObject+KAGExtensions.m in Sources */,
 				07A5483B1E7C4B1100A6C4A1 /* KAGRACScopedDisposable.m in Sources */,
+				077B15031EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m in Sources */,
 				07A548371E7C4B1100A6C4A1 /* NSObject+KAGRACDeallocating.m in Sources */,
 				07A5483E1E7C4B1100A6C4A1 /* KAGRACEXTRuntimeExtensions.m in Sources */,
 				07A548381E7C4B1100A6C4A1 /* NSObject+KAGRACKVOWrapper.m in Sources */,
