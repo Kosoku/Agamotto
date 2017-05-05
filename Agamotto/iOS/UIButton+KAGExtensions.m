@@ -17,6 +17,8 @@
 #import "KAGAction.h"
 #import "NSObject+KAGExtensions.h"
 
+#import <Stanley/KSTScopeMacros.h>
+
 #import <objc/runtime.h>
 
 static void *kKAGActionKey = &kKAGActionKey;
@@ -39,9 +41,10 @@ static void *kKAGEnabledKey = &kKAGEnabledKey;
         return;
     }
     
-    __weak __typeof__(self) weakSelf = self;
-    observer = [KAG_action KAG_addObserverForKeyPath:@"enabled" options:NSKeyValueObservingOptionInitial block:^(NSString * _Nonnull keyPath, id  _Nullable value, NSDictionary<NSKeyValueChangeKey,id> * _Nonnull change) {
-        [weakSelf setEnabled:KAG_action.isEnabled];
+    kstWeakify(self);
+    observer = [KAG_action KAG_addObserverForKeyPath:@kstKeypath(KAG_action,enabled) options:NSKeyValueObservingOptionInitial block:^(NSString * _Nonnull keyPath, id  _Nullable value, NSDictionary<NSKeyValueChangeKey,id> * _Nonnull change) {
+        kstStrongify(self);
+        [self setEnabled:KAG_action.isEnabled];
     }];
     
     objc_setAssociatedObject(self, kKAGEnabledKey, observer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

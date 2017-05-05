@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		072628281E70E49800511F80 /* Agamotto.h in Headers */ = {isa = PBXBuildFile; fileRef = 072628261E70E49800511F80 /* Agamotto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		075163B11EBD1AD700758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163B01EBD1AD700758A06 /* Stanley.framework */; };
+		075163B31EBD1ADF00758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163B21EBD1ADF00758A06 /* Stanley.framework */; };
+		075163B51EBD1AE600758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163B41EBD1AE600758A06 /* Stanley.framework */; };
+		075163B71EBD1AF000758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163B61EBD1AF000758A06 /* Stanley.framework */; };
+		075163B81EBD1B1500758A06 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072628231E70E49800511F80 /* Agamotto.framework */; };
+		075163B91EBD1B1500758A06 /* Agamotto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 072628231E70E49800511F80 /* Agamotto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		075163BC1EBD1B1F00758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163BB1EBD1B1F00758A06 /* Stanley.framework */; };
+		075163BD1EBD1B1F00758A06 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 075163BB1EBD1B1F00758A06 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		075163BE1EBD1B2A00758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163BB1EBD1B1F00758A06 /* Stanley.framework */; };
+		075163BF1EBD1B2A00758A06 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 075163BB1EBD1B1F00758A06 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		075163C11EBD1B3000758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163C01EBD1B3000758A06 /* Stanley.framework */; };
+		075163C21EBD1B3000758A06 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 075163C01EBD1B3000758A06 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		075163C41EBD1B3D00758A06 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075163C31EBD1B3D00758A06 /* Stanley.framework */; };
+		075163C51EBD1B3D00758A06 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 075163C31EBD1B3D00758A06 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		077B15001EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B15011EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B15021EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */; };
@@ -151,7 +165,6 @@
 		07DB3CC71E713B420089F7F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CC51E713B420089F7F5 /* Main.storyboard */; };
 		07DB3CC91E713B420089F7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CC81E713B420089F7F5 /* Assets.xcassets */; };
 		07DB3CCC1E713B420089F7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DB3CCA1E713B420089F7F5 /* LaunchScreen.storyboard */; };
-		07DB3CD31E713B550089F7F5 /* Agamotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072628231E70E49800511F80 /* Agamotto.framework */; };
 		07ED26B01EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07ED26B11EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07ED26B21EB5144C007F5CBE /* KAGObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ED26AF1EB5144C007F5CBE /* KAGObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -204,6 +217,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		075163BA1EBD1B1500758A06 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				075163B91EBD1B1500758A06 /* Agamotto.framework in Embed Frameworks */,
+				075163BD1EBD1B1F00758A06 /* Stanley.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07A547FF1E7C44BA00A6C4A1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +236,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07A547FC1E7C44BA00A6C4A1 /* Agamotto.framework in Embed Frameworks */,
+				075163BF1EBD1B2A00758A06 /* Stanley.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +248,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07A548591E7C4B3400A6C4A1 /* Agamotto.framework in Embed Frameworks */,
+				075163C21EBD1B3000758A06 /* Stanley.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +282,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07A548B11E7C4EF200A6C4A1 /* Agamotto.framework in Embed Frameworks */,
+				075163C51EBD1B3D00758A06 /* Stanley.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +294,13 @@
 		072628261E70E49800511F80 /* Agamotto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agamotto.h; sourceTree = "<group>"; };
 		072628271E70E49800511F80 /* Agamotto-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agamotto-iOS-Info.plist"; sourceTree = "<group>"; };
 		0726282D1E70E57300511F80 /* Agamotto-Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Agamotto-Info.h"; sourceTree = "<group>"; };
+		075163B01EBD1AD700758A06 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-iphoneos/Stanley.framework"; sourceTree = "<group>"; };
+		075163B21EBD1ADF00758A06 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = Vendor/Stanley/build/Debug/Stanley.framework; sourceTree = "<group>"; };
+		075163B41EBD1AE600758A06 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-appletvos/Stanley.framework"; sourceTree = "<group>"; };
+		075163B61EBD1AF000758A06 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-watchos/Stanley.framework"; sourceTree = "<group>"; };
+		075163BB1EBD1B1F00758A06 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		075163C01EBD1B3000758A06 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		075163C31EBD1B3D00758A06 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B14FE1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+KAGExtensions.h"; path = "iOS/UIBarButtonItem+KAGExtensions.h"; sourceTree = "<group>"; };
 		077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+KAGExtensions.m"; path = "iOS/UIBarButtonItem+KAGExtensions.m"; sourceTree = "<group>"; };
 		077B15041EBCAFA6007454FD /* KAGAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAGAction.h; sourceTree = "<group>"; };
@@ -352,6 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075163B11EBD1AD700758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +395,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075163B31EBD1ADF00758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A547FB1E7C44BA00A6C4A1 /* Agamotto.framework in Frameworks */,
+				075163BE1EBD1B2A00758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +412,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075163B51EBD1AE600758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A548581E7C4B3400A6C4A1 /* Agamotto.framework in Frameworks */,
+				075163C11EBD1B3000758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +429,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075163B71EBD1AF000758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A548B01E7C4EF200A6C4A1 /* Agamotto.framework in Frameworks */,
+				075163C41EBD1B3D00758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +446,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07DB3CD31E713B550089F7F5 /* Agamotto.framework in Frameworks */,
+				075163B81EBD1B1500758A06 /* Agamotto.framework in Frameworks */,
+				075163BC1EBD1B1F00758A06 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +464,7 @@
 				07A5486E1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS */,
 				07A5487D1E7C4D6E00A6C4A1 /* AgamottoDemo-watchOS Extension */,
 				072628241E70E49800511F80 /* Products */,
+				075163AF1EBD1AD600758A06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -477,6 +521,20 @@
 				07A547D41E7C431F00A6C4A1 /* Private */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		075163AF1EBD1AD600758A06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				075163C31EBD1B3D00758A06 /* Stanley.framework */,
+				075163C01EBD1B3000758A06 /* Stanley.framework */,
+				075163BB1EBD1B1F00758A06 /* Stanley.framework */,
+				075163B61EBD1AF000758A06 /* Stanley.framework */,
+				075163B41EBD1AE600758A06 /* Stanley.framework */,
+				075163B21EBD1ADF00758A06 /* Stanley.framework */,
+				075163B01EBD1AD700758A06 /* Stanley.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		07A547D41E7C431F00A6C4A1 /* Private */ = {
@@ -867,6 +925,7 @@
 				07DB3CB71E713B420089F7F5 /* Frameworks */,
 				07DB3CB81E713B420089F7F5 /* Resources */,
 				07A548961E7C4D6E00A6C4A1 /* Embed Watch Content */,
+				075163BA1EBD1B1500758A06 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1272,6 +1331,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-iphoneos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1337,6 +1400,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-iphoneos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "OSATOMIC_USE_INLINED=1";
@@ -1396,6 +1463,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1460,6 +1531,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1615,6 +1690,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-appletvos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1678,6 +1757,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-appletvos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1836,6 +1919,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-watchos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1900,6 +1987,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-watchos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

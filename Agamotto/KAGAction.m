@@ -15,12 +15,19 @@
 
 #import "KAGAction.h"
 
+#import <Stanley/KSTScopeMacros.h>
+
 @interface KAGAction ()
+@property (readwrite,nonatomic,getter=isExecuting) BOOL executing;
 @property (copy,nonatomic) KAGAsynchronousBlock asynchronousBlock;
 @property (strong,nonatomic) NSMapTable *executionObserversToCompletionBlocks;
 @end
 
 @implementation KAGAction
+
++ (BOOL)automaticallyNotifiesObserversOfEnabled {
+    return NO;
+}
 
 - (instancetype)initWithAsynchronousBlock:(KAGAsynchronousBlock)asynchronousBlock {
     if (!(self = [super init]))
@@ -32,24 +39,41 @@
     return self;
 }
 
-- (void)addExecutionObserver:(id)observer completion:(dispatch_block_t)completion {
+- (void)addExecutionObserver:(id)observer completion:(KAGErrorBlock)completion {
     [self.executionObserversToCompletionBlocks setObject:completion forKey:observer];
+}
+- (void)removeExecutionObserver:(id)observer {
+    [self.executionObserversToCompletionBlocks removeObjectForKey:observer];
 }
 
 - (void)execute {
-    if (!self.isEnabled) {
+    if (!self.isEnabled || self.isExecuting) {
         return;
     }
     
     [self setEnabled:NO];
+    [self setExecuting:YES];
     
-    self.asynchronousBlock(^{
-        for (dispatch_block_t block in self.executionObserversToCompletionBlocks.objectEnumerator) {
-            block();
+    self.asynchronousBlock(^(NSError *error){
+        for (KAGErrorBlock block in self.executionObserversToCompletionBlocks.objectEnumerator) {
+            block(error);
         }
         
+        [self setExecuting:NO];
         [self setEnabled:YES];
     });
+}
+
+- (void)setEnabled:(BOOL)enabled {
+    if (_enabled == enabled) {
+        return;
+    }
+    
+    [self willChangeValueForKey:@kstKeypath(self,enabled)];
+    
+    _enabled = enabled;
+    
+    [self didChangeValueForKey:@kstKeypath(self,enabled)];
 }
 
 @end

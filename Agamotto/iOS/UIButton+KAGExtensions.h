@@ -21,7 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (KAGExtensions)
 
-@property (strong,nonatomic) KAGAction *KAG_action;
+/**
+ Set and get the KAGAction instance associated with the receiver.
+ 
+ @see KAGAction
+ */
+@property (strong,nonatomic,nullable) KAGAction *KAG_action;
 
 @end
 
