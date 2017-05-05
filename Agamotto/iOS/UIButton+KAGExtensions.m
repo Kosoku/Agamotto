@@ -40,7 +40,7 @@ static void *kKAGEnabledKey = &kKAGEnabledKey;
     }
     
     __weak __typeof__(self) weakSelf = self;
-    observer = [KAG_action KAG_addObserverForKeyPath:@"enabled" options:NSKeyValueObservingOptionNew block:^(NSString * _Nonnull keyPath, id  _Nullable value, NSDictionary<NSKeyValueChangeKey,id> * _Nonnull change) {
+    observer = [KAG_action KAG_addObserverForKeyPath:@"enabled" options:NSKeyValueObservingOptionInitial block:^(NSString * _Nonnull keyPath, id  _Nullable value, NSDictionary<NSKeyValueChangeKey,id> * _Nonnull change) {
         [weakSelf setEnabled:KAG_action.isEnabled];
     }];
     
