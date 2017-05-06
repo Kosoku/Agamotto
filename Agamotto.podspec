@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Agamotto'
-  s.version          = '0.5.0'
-  s.summary          = 'Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO.'
+  s.version          = '0.6.0'
+  s.summary          = 'Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO and NSNotificationCenter.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO. It supports removing the observations upon deallocation. It is based on a portion of the ReactiveCocoa Objective-C framework.
+Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO and `NSNotificationCenter`. It supports removing the observations upon deallocation. It is based on a portion of the ReactiveCocoa Objective-C framework. It also provides a simplified version of RACCommand class, which can be assigned to various UI controls.
                        DESC
 
   s.homepage         = 'https://github.com/Kosoku/Agamotto'
