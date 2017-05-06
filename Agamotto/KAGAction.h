@@ -51,7 +51,7 @@ typedef void(^KAGAsynchronousValueErrorBlock)(KAGValueErrorBlock completion);
 /**
  Set and get whether the receiver is enabled. The value of this property affects whether execute invokes the async block provided on initialization.
  
- The default is NO.
+ The default is YES.
  */
 @property (assign,nonatomic,getter=isEnabled) BOOL enabled;
 /**
