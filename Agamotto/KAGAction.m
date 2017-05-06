@@ -41,6 +41,7 @@
     if (!(self = [super init]))
         return nil;
     
+    _enabled = YES;
     _asynchronousBlock = [valueErrorBlock copy];
     _executionObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
     _executionValueObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
