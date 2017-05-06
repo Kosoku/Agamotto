@@ -24,11 +24,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef void(^KAGErrorBlock)(NSError * _Nullable error);
 /**
+ Typedef for a block that takes a value and an NSError as its arguments, signaling success or failure.
+ 
+ @param value The value or nil
+ @param error The error or nil
+ */
+typedef void(^KAGValueErrorBlock)(id _Nullable value, NSError * _Nullable error);
+/**
  Typedef for a block that takes a KAGErrorBlock which the block should invoke upon completion of the async activity.
  
  @param completion The block to invoke when the activity is complete
  */
-typedef void(^KAGAsynchronousBlock)(KAGErrorBlock completion);
+typedef void(^KAGAsynchronousErrorBlock)(KAGErrorBlock completion);
+/**
+ Typedef for a block that takes a KAGValueErrorBlock which the block should invoke upon completion of the async activity.
+ 
+ @param completion The block to invoke when the activity is complete
+ */
+typedef void(^KAGAsynchronousValueErrorBlock)(KAGValueErrorBlock completion);
 
 /**
  KAGAction represents a repeatable action that can be assigned to various UI controls and executed when the user interacts with the control.
@@ -51,10 +64,17 @@ typedef void(^KAGAsynchronousBlock)(KAGErrorBlock completion);
 /**
  Creates and returns an instance of the receiver with the provided *asynchronousBlock* which will be invoked whenever the execute method is called.
  
- @param asynchronousBlock The async block to invoke
+ @param errorBlock The async block to invoke
  @return The initialized instance
  */
-- (instancetype)initWithAsynchronousBlock:(KAGAsynchronousBlock)asynchronousBlock NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithAsynchronousErrorBlock:(KAGAsynchronousErrorBlock)errorBlock;
+/**
+ Creates and returns an instance of the receiver with the provided *asynchronousBlock* which will be invoked whenever the execute method is called.
+ 
+ @param valueErrorBlock The async block to invoke
+ @return The initialized instance
+ */
+- (instancetype)initWithAsynchronousValueErrorBlock:(KAGAsynchronousValueErrorBlock)valueErrorBlock NS_DESIGNATED_INITIALIZER;
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
@@ -67,7 +87,14 @@ typedef void(^KAGAsynchronousBlock)(KAGErrorBlock completion);
  */
 - (void)addExecutionObserver:(id)observer completion:(KAGErrorBlock)completion;
 /**
- Remove an execution observer. This does not need to be called on dealloc, the receiver hold weak references to all execution observers.
+ Add an execution observer with the provided *completion* block that will be invoked whenever the *asynchronousBlock* provided above finishes executing. The observer can act on the provided value and error if necessary.
+ 
+ @param observer The execution observer
+ @param completion The block to invoke each time execution finishes
+ */
+- (void)addExecutionValueObserver:(id)observer completion:(KAGValueErrorBlock)completion;
+/**
+ Remove an execution observer. This does not need to be called on dealloc, the receiver holds weak references to all execution observers.
  
  @param observer The execution observer
  */

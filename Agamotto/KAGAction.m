@@ -19,8 +19,9 @@
 
 @interface KAGAction ()
 @property (readwrite,nonatomic,getter=isExecuting) BOOL executing;
-@property (copy,nonatomic) KAGAsynchronousBlock asynchronousBlock;
-@property (strong,nonatomic) NSMapTable *executionObserversToCompletionBlocks;
+@property (copy,nonatomic) KAGAsynchronousValueErrorBlock asynchronousBlock;
+@property (strong,nonatomic) NSMapTable<id, KAGErrorBlock> *executionObserversToCompletionBlocks;
+@property (strong,nonatomic) NSMapTable<id, KAGValueErrorBlock> *executionValueObserversToCompletionBlocks;
 @end
 
 @implementation KAGAction
@@ -29,12 +30,20 @@
     return NO;
 }
 
-- (instancetype)initWithAsynchronousBlock:(KAGAsynchronousBlock)asynchronousBlock {
+- (instancetype)initWithAsynchronousErrorBlock:(KAGAsynchronousErrorBlock)errorBlock {
+    return [self initWithAsynchronousValueErrorBlock:^(KAGValueErrorBlock  _Nonnull completion) {
+        errorBlock(^(NSError *error){
+            completion(nil,error);
+        });
+    }];
+}
+- (instancetype)initWithAsynchronousValueErrorBlock:(KAGAsynchronousValueErrorBlock)valueErrorBlock {
     if (!(self = [super init]))
         return nil;
     
-    _asynchronousBlock = [asynchronousBlock copy];
+    _asynchronousBlock = [valueErrorBlock copy];
     _executionObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
+    _executionValueObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
     
     return self;
 }
@@ -42,8 +51,12 @@
 - (void)addExecutionObserver:(id)observer completion:(KAGErrorBlock)completion {
     [self.executionObserversToCompletionBlocks setObject:completion forKey:observer];
 }
+- (void)addExecutionValueObserver:(id)observer completion:(KAGValueErrorBlock)completion {
+    [self.executionValueObserversToCompletionBlocks setObject:completion forKey:observer];
+}
 - (void)removeExecutionObserver:(id)observer {
     [self.executionObserversToCompletionBlocks removeObjectForKey:observer];
+    [self.executionValueObserversToCompletionBlocks removeObjectForKey:observer];
 }
 
 - (void)execute {
@@ -54,9 +67,12 @@
     [self setEnabled:NO];
     [self setExecuting:YES];
     
-    self.asynchronousBlock(^(NSError *error){
+    self.asynchronousBlock(^(id value, NSError *error){
         for (KAGErrorBlock block in self.executionObserversToCompletionBlocks.objectEnumerator) {
             block(error);
+        }
+        for (KAGValueErrorBlock block in self.executionValueObserversToCompletionBlocks.objectEnumerator) {
+            block(value,error);
         }
         
         [self setExecuting:NO];

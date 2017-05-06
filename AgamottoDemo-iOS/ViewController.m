@@ -61,7 +61,7 @@
     [self setModel:[[Model alloc] init]];
     
     __weak __typeof__(self) weakSelf = self;
-    [self setAction:[[KAGAction alloc] initWithAsynchronousBlock:^(KAGErrorBlock  _Nonnull completion) {
+    [self setAction:[[KAGAction alloc] initWithAsynchronousErrorBlock:^(KAGErrorBlock  _Nonnull completion) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.model setSubmodel:[[SubModel alloc] init]];
             
