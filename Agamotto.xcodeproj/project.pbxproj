@@ -36,6 +36,8 @@
 		077B150F1EBCB7DF007454FD /* UIButton+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B15101EBCB7DF007454FD /* UIButton+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */; };
 		077B15111EBCB7DF007454FD /* UIButton+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */; };
+		078B60491EBEC6C3009A4B16 /* NSButton+KAGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078B60471EBEC6C3009A4B16 /* NSButton+KAGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078B604A1EBEC6C3009A4B16 /* NSButton+KAGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B60481EBEC6C3009A4B16 /* NSButton+KAGExtensions.m */; };
 		07A547EB1E7C44A500A6C4A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A547EA1E7C44A500A6C4A1 /* AppDelegate.m */; };
 		07A547EE1E7C44A500A6C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A547ED1E7C44A500A6C4A1 /* main.m */; };
 		07A547F11E7C44A500A6C4A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A547F01E7C44A500A6C4A1 /* ViewController.m */; };
@@ -307,6 +309,8 @@
 		077B15051EBCAFA6007454FD /* KAGAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAGAction.m; sourceTree = "<group>"; };
 		077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+KAGExtensions.h"; path = "iOS/UIButton+KAGExtensions.h"; sourceTree = "<group>"; };
 		077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KAGExtensions.m"; path = "iOS/UIButton+KAGExtensions.m"; sourceTree = "<group>"; };
+		078B60471EBEC6C3009A4B16 /* NSButton+KAGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSButton+KAGExtensions.h"; path = "macOS/NSButton+KAGExtensions.h"; sourceTree = "<group>"; };
+		078B60481EBEC6C3009A4B16 /* NSButton+KAGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSButton+KAGExtensions.m"; path = "macOS/NSButton+KAGExtensions.m"; sourceTree = "<group>"; };
 		07A547DA1E7C43FA00A6C4A1 /* Agamotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Agamotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A547E21E7C442E00A6C4A1 /* Agamotto-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agamotto-macOS-Info.plist"; sourceTree = "<group>"; };
 		07A547E71E7C44A400A6C4A1 /* AgamottoDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgamottoDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -516,6 +520,8 @@
 				077B14FF1EBCAF7E007454FD /* UIBarButtonItem+KAGExtensions.m */,
 				077B150C1EBCB7DF007454FD /* UIButton+KAGExtensions.h */,
 				077B150D1EBCB7DF007454FD /* UIButton+KAGExtensions.m */,
+				078B60471EBEC6C3009A4B16 /* NSButton+KAGExtensions.h */,
+				078B60481EBEC6C3009A4B16 /* NSButton+KAGExtensions.m */,
 				077B15041EBCAFA6007454FD /* KAGAction.h */,
 				077B15051EBCAFA6007454FD /* KAGAction.m */,
 				07A547D41E7C431F00A6C4A1 /* Private */,
@@ -705,6 +711,7 @@
 				07A548021E7C455400A6C4A1 /* KAGRACDisposable.h in Headers */,
 				07A548011E7C455400A6C4A1 /* NSObject+KAGExtensions.h in Headers */,
 				077B15071EBCAFA6007454FD /* KAGAction.h in Headers */,
+				078B60491EBEC6C3009A4B16 /* NSButton+KAGExtensions.h in Headers */,
 				07A5480B1E7C455400A6C4A1 /* KAGRACEXTScope.h in Headers */,
 				07A548081E7C455400A6C4A1 /* KAGRACSerialDisposable.h in Headers */,
 				07A5480A1E7C455400A6C4A1 /* KAGRACEXTRuntimeExtensions.h in Headers */,
@@ -1114,6 +1121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078B604A1EBEC6C3009A4B16 /* NSButton+KAGExtensions.m in Sources */,
 				07A548131E7C456F00A6C4A1 /* KAGRACKVOTrampoline.m in Sources */,
 				07A5480F1E7C456F00A6C4A1 /* KAGRACDisposable.m in Sources */,
 				07A548161E7C456F00A6C4A1 /* KAGRACKVOProxy.m in Sources */,

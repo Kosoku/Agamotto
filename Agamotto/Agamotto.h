@@ -30,3 +30,6 @@ FOUNDATION_EXPORT const unsigned char AgamottoVersionString[];
 #import <Agamotto/UIBarButtonItem+KAGExtensions.h>
 #import <Agamotto/UIButton+KAGExtensions.h>
 #endif
+#if (TARGET_OS_OSX)
+#import <Agamotto/NSButton+KAGExtensions.h>
+#endif
