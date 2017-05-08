@@ -44,7 +44,8 @@ Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extens
   s.private_header_files = 'Agamotto/Private/*.h'
   
   s.subspec 'Core' do |ss|
-    ss.source_files = 'Agamotto/*.{h,m}'
+    ss.source_files = 'Agamotto/*.{h,m}', 'Agamotto/Private/*.{h,m}'
+    ss.exclude_files = 'Agamotto/Agamotto.h'
     
     ss.frameworks = 'Foundation'
     

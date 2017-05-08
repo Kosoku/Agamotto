@@ -18,7 +18,6 @@
 #import <objc/runtime.h>
 
 @interface KAGNotificationWrapper : NSObject
-@property (weak,nonatomic) id target;
 @property (copy,nonatomic) KAGNotificationObserverBlock block;
 
 - (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block;
