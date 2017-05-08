@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Agamotto'
-  s.version          = '0.8.0'
+  s.version          = '0.9.0'
   s.summary          = 'Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO and NSNotificationCenter.'
 
 # This description is used to generate tags and improve search results.
@@ -43,11 +43,32 @@ Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extens
   s.watchos.exclude_files = 'Agamotto/iOS', 'Agamotto/macOS'
   s.private_header_files = 'Agamotto/Private/*.h'
   
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
-  # }
-
-  s.frameworks = 'Foundation'
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'Agamotto/*.{h,m}'
+    
+    ss.frameworks = 'Foundation'
+    
+    ss.dependency 'Stanley'
+  end
   
-  s.dependency 'Stanley'
+  s.subspec 'UIKit' do |ss|
+    ss.ios.deployment_target = '10.0'
+    ss.tvos.deployment_target = '10.0'
+    
+    ss.source_files = 'Agamotto/iOS'
+    
+    ss.frameworks = 'Foundation', 'UIKit'
+    
+    ss.dependency 'Agamotto/Core'
+  end
+  
+  s.subspec 'AppKit' do |ss|
+    ss.osx.deployment_target = '10.12'
+    
+    ss.source_files = 'Agamotto/macOS'
+    
+    ss.frameworks = 'Foundation', 'AppKit'
+    
+    ss.dependency 'Agamotto/Core'
+  end
 end
