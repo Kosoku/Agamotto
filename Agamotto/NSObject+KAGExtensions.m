@@ -18,6 +18,7 @@
 #import <objc/runtime.h>
 
 @interface KAGNotificationWrapper : NSObject
+@property (weak,nonatomic) NSNotificationCenter *notificationCenter;
 @property (copy,nonatomic) KAGNotificationObserverBlock block;
 
 - (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block;
@@ -35,15 +36,16 @@
     if (!(self = [super init]))
         return nil;
     
+    _notificationCenter = notificationCenter;
     _block = [block copy];
     
-    [notificationCenter addObserver:self selector:@selector(_observeNotification:) name:notificationName object:object];
+    [_notificationCenter addObserver:self selector:@selector(_observeNotification:) name:notificationName object:object];
     
     return self;
 }
 
 - (void)stopObserving; {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [_notificationCenter removeObserver:self];
 }
 
 - (void)_observeNotification:(NSNotification *)note {
