@@ -24,7 +24,9 @@
 @property (strong,nonatomic) NSMapTable<id, KAGValueErrorBlock> *executionValueObserversToCompletionBlocks;
 @end
 
-@implementation KAGAction
+@implementation KAGAction {
+    BOOL _didChangeEnabledWhileExecuting;
+}
 
 + (BOOL)automaticallyNotifiesObserversOfEnabled {
     return NO;
@@ -68,6 +70,8 @@
     [self setEnabled:NO];
     [self setExecuting:YES];
     
+    _didChangeEnabledWhileExecuting = NO;
+    
     self.asynchronousBlock(^(id value, NSError *error){
         for (KAGErrorBlock block in self.executionObserversToCompletionBlocks.objectEnumerator) {
             block(error);
@@ -77,7 +81,10 @@
         }
         
         [self setExecuting:NO];
-        [self setEnabled:YES];
+        
+        if (!_didChangeEnabledWhileExecuting) {
+            [self setEnabled:YES];
+        }
     });
 }
 
@@ -89,6 +96,10 @@
     [self willChangeValueForKey:@kstKeypath(self,enabled)];
     
     _enabled = enabled;
+    
+    if (self.isExecuting) {
+        _didChangeEnabledWhileExecuting = YES;
+    }
     
     [self didChangeValueForKey:@kstKeypath(self,enabled)];
 }
