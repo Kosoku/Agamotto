@@ -94,7 +94,30 @@ typedef void(^KAGAsynchronousValueErrorBlock)(KAGValueErrorBlock completion);
  */
 - (void)addExecutionValueObserver:(id)observer completion:(KAGValueErrorBlock)completion;
 /**
- Remove an execution observer. This does not need to be called on dealloc, the receiver holds weak references to all execution observers.
+ Add an will execute observer will the provided *block* that will be invoked immediately before execution begins.
+ 
+ @param observer The will execute observer
+ @param block The will execute block
+ */
+- (void)addWillExecuteObserver:(id)observer block:(dispatch_block_t)block;
+/**
+ Add an execution observer with the provided *completion* block that will be invoked whenever the *asynchronousBlock* provided above finishes executing. Add an optional will execute block that will be invoked immediately before execution begins. The observer can act on the provided error if necessary.
+ 
+ @param observer The execution observer
+ @param willExecuteBlock The block to invoke before execution begins
+ @param completion The block to invoke each time execution finishes
+ */
+- (void)addWillExecuteObserver:(id)observer willExecuteBlock:(nullable dispatch_block_t)willExecuteBlock completion:(KAGErrorBlock)completion;
+/**
+ Add an execution observer with the provided *completion* block that will be invoked whenever the *asynchronousBlock* provided above finishes executing. Add an optional will execute block that will be invoked immediately before execution begins. The observer can act on the provided value and error if necessary.
+ 
+ @param observer The execution observer
+ @param willExecuteBlock The block to invoke before execution begins
+ @param completion The block to invoke each time execution finishes
+ */
+- (void)addWillExecuteValueObserver:(id)observer willExecuteBlock:(nullable dispatch_block_t)willExecuteBlock completion:(KAGValueErrorBlock)completion;
+/**
+ Remove an execution observer and will execute observer. This does not need to be called on dealloc, the receiver holds weak references to all execution observers.
  
  @param observer The execution observer
  */

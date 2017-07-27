@@ -22,6 +22,7 @@
 @property (copy,nonatomic) KAGAsynchronousValueErrorBlock asynchronousBlock;
 @property (strong,nonatomic) NSMapTable<id, KAGErrorBlock> *executionObserversToCompletionBlocks;
 @property (strong,nonatomic) NSMapTable<id, KAGValueErrorBlock> *executionValueObserversToCompletionBlocks;
+@property (strong,nonatomic) NSMapTable<id, dispatch_block_t> *willExecuteObserversToBlocks;
 @end
 
 @implementation KAGAction {
@@ -47,23 +48,42 @@
     _asynchronousBlock = [valueErrorBlock copy];
     _executionObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
     _executionValueObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
+    _willExecuteObserversToBlocks = [NSMapTable weakToStrongObjectsMapTable];
     
     return self;
 }
 
 - (void)addExecutionObserver:(id)observer completion:(KAGErrorBlock)completion {
-    [self.executionObserversToCompletionBlocks setObject:completion forKey:observer];
+    [self addWillExecuteObserver:observer willExecuteBlock:nil completion:completion];
 }
 - (void)addExecutionValueObserver:(id)observer completion:(KAGValueErrorBlock)completion {
+    [self addWillExecuteValueObserver:observer willExecuteBlock:nil completion:completion];
+}
+- (void)addWillExecuteObserver:(id)observer block:(dispatch_block_t)block {
+    [self.willExecuteObserversToBlocks setObject:block forKey:observer];
+}
+- (void)addWillExecuteObserver:(id)observer willExecuteBlock:(dispatch_block_t)willExecuteBlock completion:(KAGErrorBlock)completion {
+    if (willExecuteBlock != nil) {
+        [self.willExecuteObserversToBlocks setObject:willExecuteBlock forKey:observer];
+    }
+    [self.executionObserversToCompletionBlocks setObject:completion forKey:observer];
+}
+- (void)addWillExecuteValueObserver:(id)observer willExecuteBlock:(dispatch_block_t)willExecuteBlock completion:(KAGValueErrorBlock)completion {
+    if (willExecuteBlock != nil) {
+        [self.willExecuteObserversToBlocks setObject:willExecuteBlock forKey:observer];
+    }
     [self.executionValueObserversToCompletionBlocks setObject:completion forKey:observer];
 }
 - (void)removeExecutionObserver:(id)observer {
     [self.executionObserversToCompletionBlocks removeObjectForKey:observer];
     [self.executionValueObserversToCompletionBlocks removeObjectForKey:observer];
+    [self.willExecuteObserversToBlocks removeObjectForKey:observer];
 }
 
 - (void)execute {
-    if (!self.isEnabled || self.isExecuting) {
+    if (!self.isEnabled ||
+        self.isExecuting) {
+        
         return;
     }
     
@@ -71,6 +91,10 @@
     [self setExecuting:YES];
     
     _didChangeEnabledWhileExecuting = NO;
+    
+    for (dispatch_block_t block in self.willExecuteObserversToBlocks.objectEnumerator) {
+        block();
+    }
     
     self.asynchronousBlock(^(id value, NSError *error){
         for (KAGErrorBlock block in self.executionObserversToCompletionBlocks.objectEnumerator) {
