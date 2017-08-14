@@ -29,7 +29,7 @@
 @implementation KAGNotificationWrapper
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [_notificationCenter removeObserver:self];
 }
 
 - (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
