@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Agamotto'
-  s.version          = '0.14.0'
+  s.version          = '0.15.0'
   s.summary          = 'Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO and NSNotificationCenter.'
 
 # This description is used to generate tags and improve search results.
