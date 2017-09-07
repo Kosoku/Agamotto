@@ -73,6 +73,15 @@ typedef void(^KAGNotificationObserverBlock)(NSNotification *notification);
  */
 - (id<KAGObserver>)KAG_addObserverForNotificationName:(nullable NSNotificationName)notificationName object:(nullable id)object block:(KAGNotificationObserverBlock)block;
 /**
+ Loops through each item in *notificationNames* and calls `[self KAG_addObserverToNotificationCenter:nil notificationName:notificationName object:object block:block]`.
+ 
+ @param notificationNames The notification names to filter notifications for
+ @param object The object to filter notifications for
+ @param block The block to invoke when a matching notification is received
+ @return An object that can be used to manually stop the observation
+ */
+- (id<KAGObserver>)KAG_addObserverForNotificationNames:(id<NSFastEnumeration>)notificationNames object:(nullable id)object block:(KAGNotificationObserverBlock)block;
+/**
  Sets up notification observing on *notificationCenter* for the provided *notificationName* and *object*, invoking *block* when a matching notification is received. Returns an object that can be used to manually stop the observation, otherwise the observation ends when the receiver is deallocated. If nil is passed for *notificationCenter*, [NSNotificationCenter defaultCenter] is used.
  
  @param notificationCenter The notification center to subscribe to
@@ -82,6 +91,16 @@ typedef void(^KAGNotificationObserverBlock)(NSNotification *notification);
  @return An object that can be used to manually stop the observation
  */
 - (id<KAGObserver>)KAG_addObserverToNotificationCenter:(nullable NSNotificationCenter *)notificationCenter notificationName:(nullable NSNotificationName)notificationName object:(nullable id)object block:(KAGNotificationObserverBlock)block;
+/**
+ Sets up notification observing on *notificationCenter* for the provided *notificationNames* and *object*, invoking *block* when a matching notification is received. Returns an object that can be used to manually stop the observation, otherwise the observation ends when the receiver is deallocated. If nil is passed for *notificationCenter*, [NSNotificationCenter defaultCenter] is used.
+ 
+ @param notificationCenter The notification center to subscribe to
+ @param notificationNames The notification names to filter notifications for
+ @param object The object to filter notifications for
+ @param block The block to invoke when a matching notification is received
+ @return An object that can be used to manually stop the observation
+ */
+- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(nullable NSNotificationCenter *)notificationCenter notificationNames:(id<NSFastEnumeration>)notificationNames object:(nullable id)object block:(KAGNotificationObserverBlock)block;
 
 @end
 

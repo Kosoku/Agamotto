@@ -25,9 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (readonly,copy,nonatomic,nullable) NSSet<NSString *> *observingKeyPaths;
 /**
- Returns the notification name being observed.
+ Returns the notification names being observed.
  */
-@property (readonly,copy,nonatomic,nullable) NSNotificationName observingNotificationName;
+@property (readonly,copy,nonatomic,nullable) NSSet<NSNotificationName> *observingNotificationNames;
 /**
  Stops observation of the key paths returned by observingKeyPaths. The method is thread safe and can be called multiple times safely.
  */
