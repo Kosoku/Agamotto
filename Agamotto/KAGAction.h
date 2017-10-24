@@ -42,6 +42,13 @@ typedef void(^KAGAsynchronousErrorBlock)(KAGErrorBlock completion);
  @param completion The block to invoke when the activity is complete
  */
 typedef void(^KAGAsynchronousValueErrorBlock)(KAGValueErrorBlock completion);
+/**
+ Typedef for a block that takes a sender and a KAGValueErrorBlock which the block should invoke upon completion of the async activity.
+ 
+ @param sender The sender of the async action, usually a UI control
+ @param completion The block to invoke when the activity is complete
+ */
+typedef void(^KAGAsynchronousSenderValueErrorBlock)(id _Nullable sender, KAGValueErrorBlock completion);
 
 /**
  KAGAction represents a repeatable action that can be assigned to various UI controls and executed when the user interacts with the control.
@@ -62,19 +69,26 @@ typedef void(^KAGAsynchronousValueErrorBlock)(KAGValueErrorBlock completion);
 @property (readonly,nonatomic,getter=isExecuting) BOOL executing;
 
 /**
- Creates and returns an instance of the receiver with the provided *asynchronousBlock* which will be invoked whenever the execute method is called.
+ Creates and returns an instance of the receiver with the provided *errorBlock* which will be invoked whenever the execute method is called.
  
  @param errorBlock The async block to invoke
  @return The initialized instance
  */
 - (instancetype)initWithAsynchronousErrorBlock:(KAGAsynchronousErrorBlock)errorBlock;
 /**
- Creates and returns an instance of the receiver with the provided *asynchronousBlock* which will be invoked whenever the execute method is called.
+ Creates and returns an instance of the receiver with the provided *valueErrorBlock* which will be invoked whenever the execute method is called.
  
  @param valueErrorBlock The async block to invoke
  @return The initialized instance
  */
-- (instancetype)initWithAsynchronousValueErrorBlock:(KAGAsynchronousValueErrorBlock)valueErrorBlock NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithAsynchronousValueErrorBlock:(KAGAsynchronousValueErrorBlock)valueErrorBlock;
+/**
+ Creates and returns an instance of the receiver with the provided *senderValueErrorBlock* which will be invoked whenever the execute method is called.
+ 
+ @param senderValueErrorBlock The async block to invoke
+ @return The initialized instance
+ */
+- (instancetype)initWithAsynchronousSenderValueErrorBlock:(KAGAsynchronousSenderValueErrorBlock)senderValueErrorBlock NS_DESIGNATED_INITIALIZER;
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
@@ -124,9 +138,13 @@ typedef void(^KAGAsynchronousValueErrorBlock)(KAGValueErrorBlock completion);
 - (void)removeExecutionObserver:(id)observer;
 
 /**
- Invoke the provided *asynchronousBlock* and notify all execution observers when the blocks completion block is invoked.
+ Calls execute:, passing nil.
  */
 - (void)execute;
+/**
+ Invoke the provided *asynchronousBlock* and notify all execution observers when the blocks completion block is invoked.
+ */
+- (void)execute:(nullable id)sender;
 
 @end
 

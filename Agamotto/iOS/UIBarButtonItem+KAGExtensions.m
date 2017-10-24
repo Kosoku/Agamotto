@@ -54,7 +54,7 @@ static void *kKAGEnabledKey = &kKAGEnabledKey;
 }
 
 - (IBAction)_KAG_executeAction:(id)sender {
-    [self.KAG_action execute];
+    [self.KAG_action execute:sender];
 }
 
 @end

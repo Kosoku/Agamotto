@@ -19,7 +19,7 @@
 
 @interface KAGAction ()
 @property (readwrite,nonatomic,getter=isExecuting) BOOL executing;
-@property (copy,nonatomic) KAGAsynchronousValueErrorBlock asynchronousBlock;
+@property (copy,nonatomic) KAGAsynchronousSenderValueErrorBlock asynchronousBlock;
 @property (strong,nonatomic) NSMapTable<id, KAGErrorBlock> *executionObserversToCompletionBlocks;
 @property (strong,nonatomic) NSMapTable<id, KAGValueErrorBlock> *executionValueObserversToCompletionBlocks;
 @property (strong,nonatomic) NSMapTable<id, dispatch_block_t> *willExecuteObserversToBlocks;
@@ -41,11 +41,18 @@
     }];
 }
 - (instancetype)initWithAsynchronousValueErrorBlock:(KAGAsynchronousValueErrorBlock)valueErrorBlock {
+    return [self initWithAsynchronousSenderValueErrorBlock:^(id  _Nullable sender, KAGValueErrorBlock  _Nonnull completion) {
+        valueErrorBlock(^(id value, NSError *error){
+            completion(value,error);
+        });
+    }];
+}
+- (instancetype)initWithAsynchronousSenderValueErrorBlock:(KAGAsynchronousSenderValueErrorBlock)senderValueErrorBlock {
     if (!(self = [super init]))
         return nil;
     
     _enabled = YES;
-    _asynchronousBlock = [valueErrorBlock copy];
+    _asynchronousBlock = [senderValueErrorBlock copy];
     _executionObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
     _executionValueObserversToCompletionBlocks = [NSMapTable weakToStrongObjectsMapTable];
     _willExecuteObserversToBlocks = [NSMapTable weakToStrongObjectsMapTable];
@@ -81,6 +88,9 @@
 }
 
 - (void)execute {
+    [self execute:nil];
+}
+- (void)execute:(id)sender {
     if (!self.isEnabled ||
         self.isExecuting) {
         
@@ -96,7 +106,7 @@
         block();
     }
     
-    self.asynchronousBlock(^(id value, NSError *error){
+    self.asynchronousBlock(sender,^(id value, NSError *error){
         for (KAGErrorBlock block in self.executionObserversToCompletionBlocks.objectEnumerator) {
             block(error);
         }
