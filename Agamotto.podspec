@@ -53,7 +53,7 @@ Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extens
   end
   
   s.subspec 'UIKit' do |ss|
-    ss.ios.deployment_target = '9.0'
+    ss.ios.deployment_target = '10.0'
     ss.tvos.deployment_target = '10.0'
     
     ss.source_files = 'Agamotto/iOS'
