@@ -106,7 +106,9 @@
         block();
     }
     
+    kstWeakify(self);
     self.asynchronousBlock(sender,^(id value, NSError *error){
+        kstStrongify(self);
         for (KAGErrorBlock block in self.executionObserversToCompletionBlocks.objectEnumerator) {
             block(error);
         }
