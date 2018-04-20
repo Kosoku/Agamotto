@@ -86,7 +86,10 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
     
 	#if KAGRACCompoundDisposableInlineCount
 	[otherDisposables enumerateObjectsUsingBlock:^(KAGRACDisposable *disposable, NSUInteger index, BOOL *stop) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wimplicit-retain-self"
 		_inlineDisposables[index] = disposable;
+#pragma clang diagnostic pop
 
 		// Stop after this iteration if we've reached the end of the inlined
 		// array.
