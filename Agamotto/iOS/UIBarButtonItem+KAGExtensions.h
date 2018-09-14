@@ -28,6 +28,33 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong,nonatomic,nullable) KAGAction *KAG_action;
 
+/**
+ Create and return a UIBarButtonItem with *image* and *style* and assign *action* to it.
+ 
+ @param image The bar button item image
+ @param style The bar button item style
+ @param action The KAGAction for the bar button item
+ @return The initialized bar button item
+ */
++ (instancetype)KAG_barButtonItemWithImage:(nullable UIImage *)image style:(UIBarButtonItemStyle)style action:(KAGAction *)action;
+/**
+ Create and return a UIBarButtonItem with *title* and *style* and assign *action* to it.
+ 
+ @param title The bar button item title
+ @param style The bar button item style
+ @param action The KAGAction for the bar button item
+ @return The initialized bar button item
+ */
++ (instancetype)KAG_barButtonItemWithTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style action:(KAGAction *)action;
+/**
+ Create and return a UIBarButtonItem with *systemItem* and assign *action* to it.
+ 
+ @param systemItem The bar button system item
+ @param action The KAGAction for the bar button item
+ @return The initialized bar button item
+ */
++ (instancetype)KAG_barButtonItemWithSystemItem:(UIBarButtonSystemItem)systemItem action:(KAGAction *)action;
+
 @end
 
 NS_ASSUME_NONNULL_END

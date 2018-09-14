@@ -26,6 +26,28 @@ static void *kKAGEnabledKey = &kKAGEnabledKey;
 
 @implementation UIBarButtonItem (KAGExtensions)
 
++ (instancetype)KAG_barButtonItemWithImage:(nullable UIImage *)image style:(UIBarButtonItemStyle)style action:(KAGAction *)action; {
+    UIBarButtonItem *retval = [(UIBarButtonItem *)[self alloc] initWithImage:image style:style target:nil action:NULL];
+    
+    retval.KAG_action = action;
+    
+    return retval;
+}
++ (instancetype)KAG_barButtonItemWithTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style action:(KAGAction *)action; {
+    UIBarButtonItem *retval = [(UIBarButtonItem *)[self alloc] initWithTitle:title style:style target:nil action:NULL];
+    
+    retval.KAG_action = action;
+    
+    return retval;
+}
++ (instancetype)KAG_barButtonItemWithSystemItem:(UIBarButtonSystemItem)systemItem action:(KAGAction *)action; {
+    UIBarButtonItem *retval = [(UIBarButtonItem *)[self alloc] initWithBarButtonSystemItem:systemItem target:nil action:NULL];
+    
+    retval.KAG_action = action;
+    
+    return retval;
+}
+
 @dynamic KAG_action;
 - (KAGAction *)KAG_action {
     return objc_getAssociatedObject(self, kKAGActionKey);
