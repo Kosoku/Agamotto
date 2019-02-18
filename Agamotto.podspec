@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Agamotto'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extensions to KVO and NSNotificationCenter.'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Agamotto is an iOS/macOS/tvOS/watchOS framework that provides block based extens
 
   s.homepage         = 'https://github.com/Kosoku/Agamotto'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'license.txt' }
+  s.license          = { :type => 'Apache 2.0', :file => 'license.txt' }
   s.author           = { 'William Towe' => 'willbur1984@gmail.com' }
   s.source           = { :git => 'https://github.com/Kosoku/Agamotto.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
