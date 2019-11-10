@@ -61,7 +61,7 @@ typedef void(^KAGNotificationObserverBlock)(NSNotification *notification);
  @param block The block that will be invoked on each change
  @return An object that can be used to manually stop the observation
  */
-- (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block;
+- (id<KAGObserver>)KAG_addObserverForKeyPaths:(NSArray<NSString *> *)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block;
 
 /**
  Returns `[self KAG_addObserverToNotificationCenter:nil notificationName:notificationName object:object block:block]`.
@@ -80,7 +80,7 @@ typedef void(^KAGNotificationObserverBlock)(NSNotification *notification);
  @param block The block to invoke when a matching notification is received
  @return An object that can be used to manually stop the observation
  */
-- (id<KAGObserver>)KAG_addObserverForNotificationNames:(id<NSFastEnumeration>)notificationNames object:(nullable id)object block:(KAGNotificationObserverBlock)block;
+- (id<KAGObserver>)KAG_addObserverForNotificationNames:(NSArray<NSNotificationName> *)notificationNames object:(nullable id)object block:(KAGNotificationObserverBlock)block;
 /**
  Sets up notification observing on *notificationCenter* for the provided *notificationName* and *object*, invoking *block* when a matching notification is received. Returns an object that can be used to manually stop the observation, otherwise the observation ends when the receiver is deallocated. If nil is passed for *notificationCenter*, [NSNotificationCenter defaultCenter] is used.
  
@@ -100,7 +100,7 @@ typedef void(^KAGNotificationObserverBlock)(NSNotification *notification);
  @param block The block to invoke when a matching notification is received
  @return An object that can be used to manually stop the observation
  */
-- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(nullable NSNotificationCenter *)notificationCenter notificationNames:(id<NSFastEnumeration>)notificationNames object:(nullable id)object block:(KAGNotificationObserverBlock)block;
+- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(nullable NSNotificationCenter *)notificationCenter notificationNames:(NSArray<NSNotificationName> *)notificationNames object:(nullable id)object block:(KAGNotificationObserverBlock)block;
 
 @end
 

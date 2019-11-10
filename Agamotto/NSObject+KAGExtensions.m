@@ -144,20 +144,20 @@ static void *kKAG_ObservingNotificationNamesKey = &kKAG_ObservingNotificationNam
 - (id<KAGObserver>)KAG_addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block {
     return [self KAG_addObserverForKeyPaths:@[keyPath] options:options block:block];
 }
-- (id<KAGObserver>)KAG_addObserverForKeyPaths:(id<NSFastEnumeration>)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block; {
+- (id<KAGObserver>)KAG_addObserverForKeyPaths:(NSArray<NSString *> *)keyPaths options:(NSKeyValueObservingOptions)options block:(KAGKVOObserverBlock)block; {
     return [self.class KAG_observeTarget:self forKeyPaths:keyPaths options:options block:block];
 }
 
 - (id<KAGObserver>)KAG_addObserverForNotificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
     return [self KAG_addObserverForNotificationNames:@[notificationName ?: [NSNull null]] object:object block:block];
 }
-- (id<KAGObserver>)KAG_addObserverForNotificationNames:(id<NSFastEnumeration>)notificationNames object:(id)object block:(KAGNotificationObserverBlock)block {
+- (id<KAGObserver>)KAG_addObserverForNotificationNames:(NSArray<NSNotificationName> *)notificationNames object:(id)object block:(KAGNotificationObserverBlock)block {
     return [self KAG_addObserverToNotificationCenter:nil notificationNames:notificationNames object:object block:block];
 }
 - (id<KAGObserver>)KAG_addObserverToNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
     return [self KAG_addObserverToNotificationCenter:notificationCenter notificationNames:@[notificationName ?: [NSNull null]] object:object block:block];
 }
-- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(NSNotificationCenter *)notificationCenter notificationNames:(id<NSFastEnumeration>)notificationNames object:(id)object block:(KAGNotificationObserverBlock)block {
+- (id<KAGObserver>)KAG_addObserverToNotificationCenter:(NSNotificationCenter *)notificationCenter notificationNames:(NSArray<NSNotificationName> *)notificationNames object:(id)object block:(KAGNotificationObserverBlock)block {
     if (notificationCenter == nil) {
         notificationCenter = [NSNotificationCenter defaultCenter];
     }
