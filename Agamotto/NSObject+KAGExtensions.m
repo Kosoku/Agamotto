@@ -149,13 +149,13 @@ static void *kKAG_ObservingNotificationNamesKey = &kKAG_ObservingNotificationNam
 }
 
 - (id<KAGObserver>)KAG_addObserverForNotificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
-    return [self KAG_addObserverForNotificationNames:@[notificationName ?: [NSNull null]] object:object block:block];
+    return [self KAG_addObserverForNotificationNames:@[(NSNotificationName)(notificationName ?: [NSNull null])] object:object block:block];
 }
 - (id<KAGObserver>)KAG_addObserverForNotificationNames:(NSArray<NSNotificationName> *)notificationNames object:(id)object block:(KAGNotificationObserverBlock)block {
     return [self KAG_addObserverToNotificationCenter:nil notificationNames:notificationNames object:object block:block];
 }
 - (id<KAGObserver>)KAG_addObserverToNotificationCenter:(NSNotificationCenter *)notificationCenter notificationName:(NSNotificationName)notificationName object:(id)object block:(KAGNotificationObserverBlock)block {
-    return [self KAG_addObserverToNotificationCenter:notificationCenter notificationNames:@[notificationName ?: [NSNull null]] object:object block:block];
+    return [self KAG_addObserverToNotificationCenter:notificationCenter notificationNames:@[(NSNotificationName)(notificationName ?: [NSNull null])] object:object block:block];
 }
 - (id<KAGObserver>)KAG_addObserverToNotificationCenter:(NSNotificationCenter *)notificationCenter notificationNames:(NSArray<NSNotificationName> *)notificationNames object:(id)object block:(KAGNotificationObserverBlock)block {
     if (notificationCenter == nil) {
