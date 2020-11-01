@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 GitHub, Inc. All rights reserved.
 //
 
-#import "KAGRACDisposable.h"
+#import <Agamotto/KAGRACDisposable.h>
 
 /// A disposable of disposables. When it is disposed, it disposes of all its
 /// contained disposables.
